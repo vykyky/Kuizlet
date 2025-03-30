@@ -1,0 +1,5 @@
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Domain\obj\Debug\net8.0\Kuizlet.Domain.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Domain\obj\Debug\net8.0\Kuizlet.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Domain\obj\Debug\net8.0\Kuizlet.Domain.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Domain\obj\Debug\net8.0\Kuizlet.Domain.AssemblyInfo.cs
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Domain\obj\Debug\net8.0\Kuizlet.Domain.csproj.CoreCompileInputs.cache

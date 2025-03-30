@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Kuizlet</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+<div class="sidebar">
+    <button class="active" onclick="navigate('home')">🏠 Home</button>
+    <button onclick="navigate('library')">📚 Your Library</button>
+    <button onclick="navigate('notifications')">🔔 Notifications</button>
+</div>
+<div class="main-content">
+    <div class="container"></div>
+</div>
+<div id="cardSetModal" class="modal">
+    <div class="modal-content">
+        <h3>Create New Card Set</h3>
+        <input type="text" id="setName" placeholder="Card Set Name">
+        <select id="firstLanguage"></select>
+        <select id="secondLanguage"></select>
+        <div class="toggle-container">
+            <span>Public:</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="isPublic">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <button class="btn" onclick="createCardSet()">Create</button>
+        <button class="logout-btn" onclick="closeModal()">Cancel</button>
+    </div>
+</div>
+<div id="updateCardSetModal" class="modal">
+    <div class="modal-content">
+        <h3>Update Card Set</h3>
+        <input type="text" id="updateSetName" placeholder="Card Set Name">
+        <select id="updateFirstLanguage"></select>
+        <select id="updateSecondLanguage"></select>
+        <div class="toggle-container">
+            <span>Public:</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="updateIsPublic">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <button class="btn" onclick="updateCardSet()">Update</button>
+        <button class="logout-btn" onclick="closeUpdateModal()">Cancel</button>
+    </div>
+</div>
+<!-- <script src="../js/dashboard.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e1e2e, #3a3a5a);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.back-btn {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(106, 17, 203, 0.4);
+}
+
+.back-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(106, 17, 203, 0.6);
+}
+
+.add-card-btn {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(106, 17, 203, 0.4);
+    display: none; /* Initially hidden */
+}
+
+.add-card-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(106, 17, 203, 0.6);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dropdown-content button {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content button.delete {
+    color: #ff4b5c; /* Red color for delete button */
+}
+
+.dropdown-content button.delete:hover {
+    background: rgba(255, 75, 92, 0.2); /* Light red background on hover */
+}
+
+.dropdown-content button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 80px;
+    
+    position: relative; /* Добавлено */
+}
+
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card-container {
+    position: relative;
+    width: 450px;
+    height: 350px;
+    margin: 0 auto 40px; /* Добавлен нижний отступ */
+    perspective: 1000px;
+    
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 28px; /* Increased font size */
+    font-weight: 600;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-front {
+    background: linear-gradient(135deg, #0084ff, #00c2ff);
+    color: white;
+}
+
+.card-back {
+    background: linear-gradient(135deg, #ee92e9, #e35fc4);
+    color: white;
+    transform: rotateY(180deg);
+    padding-bottom: 40px; /* Add extra padding at the bottom */
+}
+
+.info-text {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    margin: 0 auto; /* Изменено */
+    padding-top: 20px; /* Добавлено */
+}
+
+.navigation button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation button:hover {
+    transform: scale(1.2);
+}
+
+.card-counter {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.edit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 10; /* Ensure it stays on top */
+    display: none; /* Initially hidden */
+}
+
+.edit-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal h3 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.modal input, .modal textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.modal button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+}
+
+.modal button.cancel {
+    background: linear-gradient(135deg, #ff4b5c, #ff6b81);
+}
+
+#noCardsMessage {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+    opacity: 0.8;
+    display: none; /* Initially hidden */
+}

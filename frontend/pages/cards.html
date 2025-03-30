@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Set - Kuizlet</title>
+    <link rel="stylesheet" href="../css/cards.css">
+</head>
+<body>
+
+<div class="header">
+    <button class="back-btn" onclick="window.location.href='/dashboard'">← Back to Dashboard</button>
+    <div class="dropdown">
+        <button class="add-card-btn">⚙️ Options</button>
+        <div class="dropdown-content">
+        <button onclick="navigateToViewCards()">✏️ Edit</button>
+        <button class="delete" onclick="deleteCardSet()">🗑️ Delete Card Set</button>
+    </div>
+    </div>
+</div>
+
+<div class="container">
+    <p class="info-text">Click a card to flip it!</p>
+    <div class="card-container">
+        <div class="card" onclick="flipCard()">
+            <div class="card-front" id="cardFront">Loading...</div>
+            <div class="card-back" id="cardBack">Loading...</div>
+            <button class="edit-button" onclick="openEditModal()">✏️</button>
+        </div>
+    </div>
+    <div class="navigation">
+        <button onclick="showPreviousCard()">◄</button>
+        <span class="card-counter" id="cardCounter">0/0</span>
+        <button onclick="showNextCard()">►</button>
+    </div>
+    <p id="noCardsMessage">No cards found. Add some cards to get started!</p>
+</div>
+
+<!-- Edit Card Modal -->
+<div id="editCardModal" class="modal">
+    <div class="modal-content">
+        <h3>Edit Card</h3>
+        <textarea id="editFrontText" placeholder="Front of the card"></textarea>
+        <textarea id="editBackText" placeholder="Back of the card"></textarea>
+        <button onclick="updateCard()">Update</button>
+        <button class="cancel" onclick="closeEditModal()">Cancel</button>
+    </div>
+</div>
+
+<!-- Add Card Modal -->
+<div id="addCardModal" class="modal">
+    <div class="modal-content">
+        <h3>Add New Card</h3>
+        <textarea id="addFrontText" placeholder="Front of the card"></textarea>
+        <textarea id="addBackText" placeholder="Back of the card"></textarea>
+        <button onclick="addCard()">Add Card</button>
+        <button class="cancel" onclick="closeAddCardModal()">Cancel</button>
+    </div>
+</div>
+
+<script src="../js/cards.js"></script>
+
+</body>
+</html>

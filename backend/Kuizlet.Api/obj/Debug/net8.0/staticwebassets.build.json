@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "aiDM3FOFleaWdA3UyKG+9yuueYmKLkR4Mk52vr1utFE=",
+  "Source": "Kuizlet.Api",
+  "BasePath": "_content/Kuizlet.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

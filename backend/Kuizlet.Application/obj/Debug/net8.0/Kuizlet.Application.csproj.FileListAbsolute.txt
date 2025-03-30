@@ -1,0 +1,11 @@
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Application\bin\Debug\net8.0\Kuizlet.Application.deps.json
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Application\bin\Debug\net8.0\Kuizlet.Application.dll
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Application\bin\Debug\net8.0\Kuizlet.Application.pdb
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Application\obj\Debug\net8.0\Kuizlet.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Application\obj\Debug\net8.0\Kuizlet.Application.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Application\obj\Debug\net8.0\Kuizlet.Application.AssemblyInfo.cs
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Application\obj\Debug\net8.0\Kuizlet.Application.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Application\obj\Debug\net8.0\Kuizlet.Application.dll
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Application\obj\Debug\net8.0\refint\Kuizlet.Application.dll
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Application\obj\Debug\net8.0\Kuizlet.Application.pdb
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Application\obj\Debug\net8.0\ref\Kuizlet.Application.dll

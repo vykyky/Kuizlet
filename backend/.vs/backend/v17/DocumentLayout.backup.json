@@ -1,0 +1,606 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.domain\\entities\\accessrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|solutionrelative:kuizlet.domain\\entities\\accessrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|solutionrelative:kuizlet.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.domain\\entities\\cardset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|solutionrelative:kuizlet.domain\\entities\\cardset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.domain\\entities\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|solutionrelative:kuizlet.domain\\entities\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.application\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|solutionrelative:kuizlet.application\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|solutionrelative:kuizlet.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.application\\services\\registerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|solutionrelative:kuizlet.application\\services\\registerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.application\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|solutionrelative:kuizlet.application\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.application\\services\\cardsetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|solutionrelative:kuizlet.application\\services\\cardsetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.application\\services\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|solutionrelative:kuizlet.application\\services\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.application\\services\\accessrequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|solutionrelative:kuizlet.application\\services\\accessrequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C19544AE-8D51-46AE-8C1B-A21D645E0D42}|Kuizlet.Infrastructure\\Kuizlet.Infrastructure.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.infrastructure\\repositories\\cardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C19544AE-8D51-46AE-8C1B-A21D645E0D42}|Kuizlet.Infrastructure\\Kuizlet.Infrastructure.csproj|solutionrelative:kuizlet.infrastructure\\repositories\\cardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C19544AE-8D51-46AE-8C1B-A21D645E0D42}|Kuizlet.Infrastructure\\Kuizlet.Infrastructure.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.infrastructure\\repositories\\cardsetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C19544AE-8D51-46AE-8C1B-A21D645E0D42}|Kuizlet.Infrastructure\\Kuizlet.Infrastructure.csproj|solutionrelative:kuizlet.infrastructure\\repositories\\cardsetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C19544AE-8D51-46AE-8C1B-A21D645E0D42}|Kuizlet.Infrastructure\\Kuizlet.Infrastructure.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.infrastructure\\repositories\\userreposity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C19544AE-8D51-46AE-8C1B-A21D645E0D42}|Kuizlet.Infrastructure\\Kuizlet.Infrastructure.csproj|solutionrelative:kuizlet.infrastructure\\repositories\\userreposity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.application\\kuizlet.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D50EE423-014C-4A50-B6F6-ED066507A4D9}|Kuizlet.Application\\Kuizlet.Application.csproj|solutionrelative:kuizlet.application\\kuizlet.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C19544AE-8D51-46AE-8C1B-A21D645E0D42}|Kuizlet.Infrastructure\\Kuizlet.Infrastructure.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.infrastructure\\repositories\\accessrequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C19544AE-8D51-46AE-8C1B-A21D645E0D42}|Kuizlet.Infrastructure\\Kuizlet.Infrastructure.csproj|solutionrelative:kuizlet.infrastructure\\repositories\\accessrequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.domain\\exceptions\\response\\errorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|solutionrelative:kuizlet.domain\\exceptions\\response\\errorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.domain\\exceptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|solutionrelative:kuizlet.domain\\exceptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.domain\\exceptions\\unauthorizedaccessexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|solutionrelative:kuizlet.domain\\exceptions\\unauthorizedaccessexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.domain\\exceptions\\usernotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|solutionrelative:kuizlet.domain\\exceptions\\usernotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.domain\\exceptions\\cardsetnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|solutionrelative:kuizlet.domain\\exceptions\\cardsetnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.domain\\exceptions\\cardsetalreadyexistsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|solutionrelative:kuizlet.domain\\exceptions\\cardsetalreadyexistsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.domain\\exceptions\\cardnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|solutionrelative:kuizlet.domain\\exceptions\\cardnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.api\\controllers\\accessrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|solutionrelative:kuizlet.api\\controllers\\accessrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.api\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|solutionrelative:kuizlet.api\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|solutionrelative:kuizlet.api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.api\\controllers\\cardsetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|solutionrelative:kuizlet.api\\controllers\\cardsetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.api\\controllers\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|solutionrelative:kuizlet.api\\controllers\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|solutionrelative:kuizlet.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|solutionrelative:kuizlet.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.api\\controllers\\viewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|solutionrelative:kuizlet.api\\controllers\\viewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.domain\\kuizlet.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DBD34B47-F61D-4917-A16D-C7D56B16C82B}|Kuizlet.Domain\\Kuizlet.Domain.csproj|solutionrelative:kuizlet.domain\\kuizlet.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C19544AE-8D51-46AE-8C1B-A21D645E0D42}|Kuizlet.Infrastructure\\Kuizlet.Infrastructure.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.infrastructure\\kuizlet.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C19544AE-8D51-46AE-8C1B-A21D645E0D42}|Kuizlet.Infrastructure\\Kuizlet.Infrastructure.csproj|solutionrelative:kuizlet.infrastructure\\kuizlet.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|c:\\users\\lenovo\\documents\\oop\\kuizlet\\backend\\kuizlet.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{609FE8F9-E9C8-4107-AF02-5649FC4DF992}|Kuizlet.Api\\Kuizlet.Api.csproj|solutionrelative:kuizlet.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Services\\RegisterService.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Application\\Services\\RegisterService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Services\\RegisterService.cs",
+              "RelativeToolTip": "Kuizlet.Application\\Services\\RegisterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:57:38.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Services\\LoginService.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Application\\Services\\LoginService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Services\\LoginService.cs",
+              "RelativeToolTip": "Kuizlet.Application\\Services\\LoginService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:57:19.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Services\\UserService.cs",
+              "RelativeToolTip": "Kuizlet.Application\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:57:02.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "Kuizlet.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:11:45.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Entities\\Card.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Domain\\Entities\\Card.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Entities\\Card.cs",
+              "RelativeToolTip": "Kuizlet.Domain\\Entities\\Card.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:11:03.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccessRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Entities\\AccessRequest.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Domain\\Entities\\AccessRequest.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Entities\\AccessRequest.cs",
+              "RelativeToolTip": "Kuizlet.Domain\\Entities\\AccessRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:16:01.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CardSet.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Entities\\CardSet.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Domain\\Entities\\CardSet.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Entities\\CardSet.cs",
+              "RelativeToolTip": "Kuizlet.Domain\\Entities\\CardSet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:11:26.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "JWTService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Services\\JWTService.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Application\\Services\\JWTService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Services\\JWTService.cs",
+              "RelativeToolTip": "Kuizlet.Application\\Services\\JWTService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:58:43.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CardSetService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Services\\CardSetService.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Application\\Services\\CardSetService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Services\\CardSetService.cs",
+              "RelativeToolTip": "Kuizlet.Application\\Services\\CardSetService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:56:31.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CardService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Services\\CardService.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Application\\Services\\CardService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Services\\CardService.cs",
+              "RelativeToolTip": "Kuizlet.Application\\Services\\CardService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:56:11.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AccessRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Services\\AccessRequestService.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Application\\Services\\AccessRequestService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Services\\AccessRequestService.cs",
+              "RelativeToolTip": "Kuizlet.Application\\Services\\AccessRequestService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:55:04.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserReposity.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Infrastructure\\Repositories\\UserReposity.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Infrastructure\\Repositories\\UserReposity.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Infrastructure\\Repositories\\UserReposity.cs",
+              "RelativeToolTip": "Kuizlet.Infrastructure\\Repositories\\UserReposity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:49:37.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CardSetRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Infrastructure\\Repositories\\CardSetRepository.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Infrastructure\\Repositories\\CardSetRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Infrastructure\\Repositories\\CardSetRepository.cs",
+              "RelativeToolTip": "Kuizlet.Infrastructure\\Repositories\\CardSetRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:49:13.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CardRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Infrastructure\\Repositories\\CardRepository.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Infrastructure\\Repositories\\CardRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Infrastructure\\Repositories\\CardRepository.cs",
+              "RelativeToolTip": "Kuizlet.Infrastructure\\Repositories\\CardRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:42:47.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AccessRequestRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Infrastructure\\Repositories\\AccessRequestRepository.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Infrastructure\\Repositories\\AccessRequestRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Infrastructure\\Repositories\\AccessRequestRepository.cs",
+              "RelativeToolTip": "Kuizlet.Infrastructure\\Repositories\\AccessRequestRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:42:24.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ErrorResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Exceptions\\Response\\ErrorResponse.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Domain\\Exceptions\\Response\\ErrorResponse.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Exceptions\\Response\\ErrorResponse.cs",
+              "RelativeToolTip": "Kuizlet.Domain\\Exceptions\\Response\\ErrorResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:39:21.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Kuizlet.Application",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Kuizlet.Application.csproj",
+              "RelativeDocumentMoniker": "Kuizlet.Application\\Kuizlet.Application.csproj",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Application\\Kuizlet.Application.csproj",
+              "RelativeToolTip": "Kuizlet.Application\\Kuizlet.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-29T22:00:12.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Exceptions\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Domain\\Exceptions\\GlobalExceptionHandler.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Exceptions\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "Kuizlet.Domain\\Exceptions\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:38:38.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UnauthorizedAccessException.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Exceptions\\UnauthorizedAccessException.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Domain\\Exceptions\\UnauthorizedAccessException.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Exceptions\\UnauthorizedAccessException.cs",
+              "RelativeToolTip": "Kuizlet.Domain\\Exceptions\\UnauthorizedAccessException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:37:54.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserNotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Exceptions\\UserNotFoundException.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Domain\\Exceptions\\UserNotFoundException.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Exceptions\\UserNotFoundException.cs",
+              "RelativeToolTip": "Kuizlet.Domain\\Exceptions\\UserNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:37:27.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CardSetNotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Exceptions\\CardSetNotFoundException.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Domain\\Exceptions\\CardSetNotFoundException.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Exceptions\\CardSetNotFoundException.cs",
+              "RelativeToolTip": "Kuizlet.Domain\\Exceptions\\CardSetNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:36:39.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CardSetAlreadyExistsException.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Exceptions\\CardSetAlreadyExistsException.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Domain\\Exceptions\\CardSetAlreadyExistsException.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Exceptions\\CardSetAlreadyExistsException.cs",
+              "RelativeToolTip": "Kuizlet.Domain\\Exceptions\\CardSetAlreadyExistsException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:36:16.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CardNotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Exceptions\\CardNotFoundException.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Domain\\Exceptions\\CardNotFoundException.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Exceptions\\CardNotFoundException.cs",
+              "RelativeToolTip": "Kuizlet.Domain\\Exceptions\\CardNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:35:41.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Program.cs",
+              "RelativeToolTip": "Kuizlet.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:32:03.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "RegisterController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Controllers\\RegisterController.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Api\\Controllers\\RegisterController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Controllers\\RegisterController.cs",
+              "RelativeToolTip": "Kuizlet.Api\\Controllers\\RegisterController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:28:36.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Api\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Kuizlet.Api\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:28:19.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CardSetController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Controllers\\CardSetController.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Api\\Controllers\\CardSetController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Controllers\\CardSetController.cs",
+              "RelativeToolTip": "Kuizlet.Api\\Controllers\\CardSetController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:27:04.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CardController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Controllers\\CardController.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Api\\Controllers\\CardController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Controllers\\CardController.cs",
+              "RelativeToolTip": "Kuizlet.Api\\Controllers\\CardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:26:25.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Dockerfile",
+              "RelativeDocumentMoniker": "Kuizlet.Api\\Dockerfile",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Dockerfile",
+              "RelativeToolTip": "Kuizlet.Api\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-29T21:59:33.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AccessRequestController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Controllers\\AccessRequestController.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Api\\Controllers\\AccessRequestController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Controllers\\AccessRequestController.cs",
+              "RelativeToolTip": "Kuizlet.Api\\Controllers\\AccessRequestController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:25:36.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ViewController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Controllers\\ViewController.cs",
+              "RelativeDocumentMoniker": "Kuizlet.Api\\Controllers\\ViewController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Controllers\\ViewController.cs",
+              "RelativeToolTip": "Kuizlet.Api\\Controllers\\ViewController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T22:28:03.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Kuizlet.Infrastructure",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Infrastructure\\Kuizlet.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Kuizlet.Infrastructure\\Kuizlet.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Infrastructure\\Kuizlet.Infrastructure.csproj",
+              "RelativeToolTip": "Kuizlet.Infrastructure\\Kuizlet.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-29T22:01:00.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Kuizlet.Domain",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Kuizlet.Domain.csproj",
+              "RelativeDocumentMoniker": "Kuizlet.Domain\\Kuizlet.Domain.csproj",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Domain\\Kuizlet.Domain.csproj",
+              "RelativeToolTip": "Kuizlet.Domain\\Kuizlet.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-29T21:59:58.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Kuizlet.Api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\OOP\\Kuizlet\\backend\\Kuizlet.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Kuizlet.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-29T21:58:58.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
