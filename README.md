@@ -73,18 +73,50 @@ kuizlet
 
 ---
 
-## 📊 UML-диаграммы проекта Kuizlet
+## 📊 UML-диаграммы
 
 ### 1. Class Diagram 
+**Диаграмма классов в разработке**
 
 ### 2. Use Case Diagram 
 ![Use Case Diagram](/docs/diagrams/out/kuizlet_usecase.png)
 
 ### 3. Sequence Diagram
-![Sequence Diagram](/docs/diagrams/out/sequence_reg.png)
+#### 3.1 Регистрация
+![Sequence Registration](/docs/diagrams/out/sequence_reg.png)
+
+#### 3.2 Авторизация 
+![Sequence Login](/docs/diagrams/out/sequence_login.png)
+
+#### 3.3 Создание набора
+![Sequence Create Cardset](/docs/diagrams/out/sequence_create_cardset.png)
+
+#### 3.4 Редактирование карточки
+![Sequence Edit Card](/docs/diagrams/out/sequence_edit_card.png)
+
+#### 3.5 Получение набора карточек
+![Sequence Get Cardset](/docs/diagrams/out/sequence_get_cardset.png)  
+
+#### 3.6 Подтверждение доступа
+![Sequence Confirm Access](/docs/diagrams/out/sequence_confirm_cardset.png)
 
 ### 4. Activity Diagram
-![Activity Diagram](/docs/diagrams/out/activity_access_request.png)
+#### 4.1 Запрос доступа
+![Activity Access Request](/docs/diagrams/out/activity_access_request.png)
+
+#### 4.2 Создание набора
+![Activity Create Cardset](/docs/diagrams/out/activity_create_cardset.png)
+
+#### 4.3 Прохождение теста
+![Activity Test](/docs/diagrams/out/activity_test.png)
 
 ### 5. State Diagram
-![State Diagram](/docs/diagrams/out/state_cardset.png)
+
+#### 5.1 Набор карточек
+![State Cardset](/docs/diagrams/out/state_cardset.png)
+
+#### 5.2 Пользователь
+![State User](/docs/diagrams/out/state_user.png)
+
+#### 5.3 Запрос доступа
+![State Access Request](/docs/diagrams/out/state_access_request.png)
