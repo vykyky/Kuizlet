@@ -70,3 +70,21 @@ kuizlet
 
 ```
 То есть чистая архитектура, возможно с клиент-серверным разделением.
+
+---
+
+## 📊 UML-диаграммы проекта Kuizlet
+
+### 1. Class Diagram 
+
+### 2. Use Case Diagram 
+![Use Case Diagram](/docs/diagrams/out/kuizlet_usecase.png)
+
+### 3. Sequence Diagram
+![Sequence Diagram](/docs/diagrams/out/sequence_reg.png)
+
+### 4. Activity Diagram
+![Activity Diagram](/docs/diagrams/out/activity_access_request.png)
+
+### 5. State Diagram
+![State Diagram](/docs/diagrams/out/state_cardset.png)

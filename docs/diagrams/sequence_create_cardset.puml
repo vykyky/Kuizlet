@@ -1,0 +1,21 @@
+@startuml
+
+title Sequence Diagram (Создание набора карточек)
+
+actor User
+entity "Controller (WebUI)" as Controller
+entity "IRepository(Application)" as UseCase
+entity "Repository(Infrastructure)" as Repository
+entity "CardSetEntity(Domain)" as Entity
+database "Database" as DB
+
+User -> Controller : Отправляет запрос на создание набора
+Controller -> UseCase : Передает запрос с данными
+UseCase -> Repository : Запрашивает создание карточек
+Repository -> DB : Выполняет запрос в БД
+DB -> Repository : Возвращает данные (или подтверждение)
+Repository -> Entity : Создает/обновляет Entity
+Entity -> UseCase : Возвращает Entity
+UseCase -> Controller : Передает результат (Entity)
+Controller -> User : Отображает результат
+@enduml

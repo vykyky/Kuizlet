@@ -1,0 +1,26 @@
+@startuml
+
+title Sequence Diagram (Доступ к набору карточек)
+
+actor Пользователь
+participant "Система доступа к наборам" as AccessSystem
+participant "База данных" as DB
+participant "Владелец набора" as Owner
+
+Пользователь -> AccessSystem : Запрос на просмотр набора
+alt Если набор принадлежит пользователю
+    AccessSystem -> Пользователь : Показать набор и карточки
+else Если набор публичный
+    AccessSystem -> Пользователь : Показать набор
+    AccessSystem -> Пользователь : Показать кнопки запроса доступа
+    Пользователь -> AccessSystem : Подать запрос на доступ
+    AccessSystem -> DB : Сохранить запрос в базе данных
+    AccessSystem -> Owner : Отправить запрос владельцу
+    Owner -> AccessSystem : Ответ (одобрение/отклонение)
+    AccessSystem -> DB : Обновить статус запроса в базе данных
+    AccessSystem -> Пользователь : Ответ (доступ разрешен/отказан)
+else Если набор приватный
+    AccessSystem -> Пользователь : Доступ запрещен
+end
+@enduml
+

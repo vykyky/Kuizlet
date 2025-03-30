@@ -1,0 +1,43 @@
+@startuml
+
+title Sequence Diagram (Редактирование карточек)
+
+actor User
+entity "CardController (WebUI)" as Controller
+entity "IRepository (Application)" as UseCase
+entity "Repository (Infrastructure)" as Repository
+entity "CardEntity (Domain)" as Entity
+database "Database" as DB
+
+User -> Controller : Отправляет запрос на редактирование карточки
+
+Controller -> UseCase : Передает запрос с данными для редактирования
+
+UseCase -> Repository : Запрашивает текущие данные карточки
+
+Repository -> DB : Выполняет запрос в БД
+
+DB -> Repository : Возвращает данные карточки
+
+Repository -> Entity : Загружает карточку в Entity
+
+Entity -> UseCase : Передает данные карточки
+
+User -> Controller : Вносит изменения в карточку
+
+Controller -> UseCase : Передает обновленные данные
+
+UseCase -> Repository : Запрашивает обновление карточки
+
+Repository -> DB : Выполняет запрос на обновление в БД
+
+DB -> Repository : Возвращает подтверждение обновления
+
+Repository -> Entity : Обновляет Entity
+
+Entity -> UseCase : Возвращает обновленные данные карточки
+
+UseCase -> Controller : Передает обновленную карточку
+
+Controller -> User : Отображает обновленную карточку
+@enduml
