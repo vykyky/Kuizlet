@@ -1,0 +1,230 @@
+@startuml
+' Настройки
+top to bottom direction
+hide empty members
+skinparam classAttributeIconSize 0
+
+' Пакет Domain
+package "Kuizlet.Domain" {
+  class User {
+    +Id: Guid
+    +Login: string
+    +PasswordHash: String
+    +PasswordSalt: String
+    +User(id: Guid, login: string, passwordHash: String, passwordSalt: String)
+  }
+
+  class Card {
+    +Id: Guid
+    +Term: string
+    +Definition: string
+    +CardSetId: Guid
+    +Card(id: Guid, term: string, definition: string, cardSetId: Guid)
+    +Card(term: string, definition: string, cardSetId: Guid)
+  }
+
+  class CardSet {
+    +Id: Guid
+    +Name: string
+    +Cards: string
+    +CreatorId: Guid
+    +ApprovedUserIds: List<Guid>
+    +IsPublic: bool
+    +CardSet(id: Guid, name: string, cards: string, creatorId: Guid, approvedUserIds: List<Guid>, isPublic: bool)
+    +CardSet(name: string, creatorId: Guid, isPublic: bool)
+  }
+
+  class AccessRequest {
+    +RequesterId: Guid
+    +CardSetId: Guid
+    +Status: String
+    +AccessRequest(requesterId: Guid, cardSetId: Guid, status: String)
+    +AccessRequest(requesterId: Guid, cardSetId: Guid)
+  }
+}
+
+' Пакет Application
+package "Kuizlet.Application" #DDDDDD {
+  interface IUserRepository <<interface>> {
+    +CreateUser(user: UserDto): ResponseDto<UserDto>
+    +GetUserByEmail(email: string): UserDto?
+    +GetUserById(id: Guid): UserDto?
+  }
+
+  interface ICardRepository <<interface>> {
+    +GetCardsBySetId(setId: Guid): List<CardDto>
+    +CreateCard(card: CardDto): ResponseDto<CardDto>
+    +DeleteCard(id: Guid): ResponseDto<bool>
+  }
+
+  interface ICardSetRepository <<interface>> {
+    +GetCardSetsByUserId(userId: Guid): List<CardSetDto>
+    +CreateCardSet(cardSet: CardSetDto): ResponseDto<CardSetDto>
+    +DeleteCardSet(id: Guid): ResponseDto<bool>
+  }
+
+  interface IAccessRequestRepository <<interface>> {
+    +CreateRequest(request: AccessRequestDto): ResponseDto<AccessRequestDto>
+    +ProcessRequest(requestId: Guid, status: AccessStatus): ResponseDto<bool>
+  }
+
+  class AccessRequestService {
+    -_accessRequestRepository: IAccessRequestRepository
+    -_cardSetRepository: ICardSetRepository
+    -_userRepository: IUserRepository
+    -_userService: UserService
+    +RequestAccessAsync(cardSetId: Guid): ResponseDto
+    +RespondToRequestAsync(cardSetId: Guid, requestId: Guid, approve: bool): ResponseDto
+    +GetPendingRequestsAsync(cardSetId: Guid): List<AccessRequestDto>
+  }
+
+  class CardService {
+    -_cardRepository: ICardRepository
+    -_cardSetRepository: ICardSetRepository
+    +GetAllCardsByCardSetIdAsync(cardSetId: Guid): IEnumerable<CardDto>
+    +AddCardAsync(cardSetId: Guid, cardDto: CardDto): CardDto
+    +UpdateCardAsync(cardId: Guid, cardDto: CardDto): CardDto
+  }
+
+  class CardSetService {
+    -_cardSetRepository: ICardSetRepository
+    -_userService: UserService
+    -_userRepository: IUserRepository
+    +GetAllCardSetsAsync(): IEnumerable<CardSetDto>
+    +GetCardSetByIdAsync(cardSetId: Guid): CardSetDto
+    +CreateCardSetAsync(cardSetDto: CardSetDto): CardSetDto
+  }
+
+  class JWTService {
+    +GenerateToken(user: UserDto): string
+    +ValidateToken(token: string): bool
+  }
+
+  class UserService {
+    -_userRepository: IUserRepository
+    +ExistsByUsernameAsync(username: string): bool
+  }
+
+  class LoginService {
+    -_jwtService: JWTService
+    -_userRepository: IUserRepository
+    +Authenticate(loginDto: LoginRequestDto): ResponseDto<string>
+  }
+
+  class RegisterService {
+    -_userRepository: IUserRepository
+    +Register(registerDto: RegisterRequestDto): ResponseDto<UserDto>
+  }
+
+  ' DTO классы
+  class UserDto {
+    +Id: Guid
+    +Login: string
+  }
+
+  class CardDto {
+    +Id: Guid
+    +Term: string
+    +Definition: string
+  }
+
+  class CardSetDto {
+    +Id: Guid
+    +Name: string
+    +IsPublic: bool
+    +CreatorId: Guid
+  }
+
+  class AccessRequestDto {
+    +Id: Guid
+    +CardSetId: Guid
+    +CardSetName: string
+    +Status: string
+  }
+}
+
+' Пакет Infrastructure
+package "Kuizlet.Infrastructure" #DDDDDD {
+  class UserRepository {
+    +CreateUser(user: UserDto): ResponseDto<UserDto>
+    +GetUserByEmail(email: string): UserDto?
+  }
+
+  class CardRepository {
+    +GetCardsBySetId(setId: Guid): List<CardDto>
+    +CreateCard(card: CardDto): ResponseDto<CardDto>
+  }
+
+  class CardSetRepository {
+    +GetCardSetsByUserId(userId: Guid): List<CardSetDto>
+    +CreateCardSet(cardSet: CardSetDto): ResponseDto<CardSetDto>
+  }
+
+  class AccessRequestRepository {
+    +CreateRequest(request: AccessRequestDto): ResponseDto<AccessRequestDto>
+    +ProcessRequest(requestId: Guid, status: AccessStatus): ResponseDto<bool>
+  }
+}
+
+' Пакет Api
+package "Kuizlet.Web" #DDDDDD {
+  class UserController {
+    -_userService: UserService
+    +GetUserById(id: Guid): IActionResult
+  }
+
+  class CardController {
+    -_cardService: CardService
+    +GetCardsBySetId(setId: Guid): IActionResult
+  }
+
+  class CardSetController {
+    -_cardSetService: CardSetService
+    +GetCardSetsByUserId(userId: Guid): IActionResult
+  }
+
+  class AccessRequestController {
+    -_accessRequestService: AccessRequestService
+    +CreateRequest(request: AccessRequestDto): IActionResult
+  }
+
+  class LoginController {
+    -_loginService: LoginService
+    +Authenticate(login: LoginRequestDto): IActionResult
+  }
+
+  class RegisterController {
+    -_registerService: RegisterService
+    +Register(register: RegisterRequestDto): IActionResult
+  }
+}
+
+' Связи между слоями
+Kuizlet.Domain.User -[hidden]-> Kuizlet.Application.UserDto
+Kuizlet.Domain.Card -[hidden]-> Kuizlet.Application.CardDto
+Kuizlet.Domain.CardSet -[hidden]-> Kuizlet.Application.CardSetDto
+Kuizlet.Domain.AccessRequest -[hidden]-> Kuizlet.Application.AccessRequestDto
+
+Kuizlet.Application.IUserRepository <|.. Kuizlet.Infrastructure.UserRepository
+Kuizlet.Application.ICardRepository <|.. Kuizlet.Infrastructure.CardRepository
+Kuizlet.Application.ICardSetRepository <|.. Kuizlet.Infrastructure.CardSetRepository
+Kuizlet.Application.IAccessRequestRepository <|.. Kuizlet.Infrastructure.AccessRequestRepository
+
+Kuizlet.Web.UserController --> Kuizlet.Application.UserService  
+Kuizlet.Web.CardController --> Kuizlet.Application.CardService  
+Kuizlet.Web.CardSetController -->  Kuizlet.Application.CardSetService 
+Kuizlet.Web.AccessRequestController --> Kuizlet.Application.AccessRequestService 
+Kuizlet.Web.LoginController -->  Kuizlet.Application.LoginService
+Kuizlet.Web.RegisterController --> Kuizlet.Application.RegisterService  
+
+Kuizlet.Application.AccessRequestService --> Kuizlet.Application.ICardSetRepository
+Kuizlet.Application.AccessRequestService --> Kuizlet.Application.IUserRepository
+Kuizlet.Application.AccessRequestService --> Kuizlet.Application.UserService
+
+Kuizlet.Application.CardService --> Kuizlet.Application.ICardSetRepository
+
+Kuizlet.Application.CardSetService --> Kuizlet.Application.UserService
+Kuizlet.Application.CardSetService --> Kuizlet.Application.IUserRepository
+
+Kuizlet.Application.LoginService --> Kuizlet.Application.JWTService
+@enduml
