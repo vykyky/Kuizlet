@@ -76,7 +76,6 @@ kuizlet
 ## 📊 UML-диаграммы
 
 ### 1. Class Diagram 
-**Диаграмма классов в разработке**
 ![Class Diagram](/docs/diagrams/out/kuizlet_class.png)
 
 ### 2. Use Case Diagram 
