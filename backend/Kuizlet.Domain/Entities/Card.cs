@@ -8,13 +8,11 @@ using MongoDB.Bson;
 
 namespace Kuizlet.Domain.Entities
 {
-    internal class Card
+    public class Card
     {
-        public ObjectId Id { get; set; }
-
+        public Guid Id { get; set; }
         public string Term { get; set; }
         public string Definition { get; set; }
-
-        public ObjectId CardSetId { get; set; }
+        public Guid CardSetId { get; set; }
     }
 }

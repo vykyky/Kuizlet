@@ -7,20 +7,19 @@ function navigateToViewCards() {
     }
 }
 
-const token = null;
-/*const token = localStorage.getItem("jwt");
+const token = localStorage.getItem("jwt");
 
 if (!token) {
     alert("You are not logged in!");
     window.location.href = "/login";
-}*/
+}
 const urlParams = new URLSearchParams(window.location.search);
 const cardSetId = urlParams.get("cardSetId");
 
-/*if (!cardSetId) {
+if (!cardSetId) {
     alert("Invalid Card Set ID!");
     window.location.href = "dashboard";
-}*/
+}
 
 let cards = [];
 let currentCardIndex = 0;
@@ -32,7 +31,7 @@ async function fetchCards() {
         const cardSetResponse = await fetch(`/cardsets/${cardSetId}`, {
             method: "GET",
             headers: {
-                //"Authorization": `Bearer ${token}`,
+                "Authorization": `Bearer ${token}`,
                 "Content-Type": "application/json"
             }
         });
@@ -56,7 +55,7 @@ async function fetchCards() {
         const cardsResponse = await fetch(`/cards/allCards/${cardSetId}`, {
             method: "GET",
             headers: {
-                //"Authorization": `Bearer ${token}`,
+                "Authorization": `Bearer ${token}`,
                 "Content-Type": "application/json"
             }
         });
@@ -154,7 +153,7 @@ async function addCard() {
         const response = await fetch(`/cards`, {
             method: "POST",
             headers: {
-                //"Authorization": `Bearer ${token}`,
+                "Authorization": `Bearer ${token}`,
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(newCard)
@@ -192,7 +191,7 @@ async function updateCard() {
         const response = await fetch(`/cards/${cards[currentCardIndex].id}`, {
             method: "PUT",
             headers: {
-                //"Authorization": `Bearer ${token}`,
+                "Authorization": `Bearer ${token}`,
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(CardRecord)
@@ -222,7 +221,7 @@ async function deleteCardSet() {
         const response = await fetch(`/cardsets/${cardSetId}`, {
             method: "DELETE",
             headers: {
-                //"Authorization": `Bearer ${token}`,
+                "Authorization": `Bearer ${token}`,
                 "Content-Type": "application/json"
             }
         });
@@ -232,7 +231,7 @@ async function deleteCardSet() {
         }
 
         alert("Card set deleted successfully!");
-        window.location.href = "/dashboard"; // Redirect to dashboard
+        window.location.href = "../pages/dashboard.html"; // Redirect to dashboard
     } catch (error) {
         console.error("Error deleting card set:", error);
         alert("Failed to delete card set. Please try again.");

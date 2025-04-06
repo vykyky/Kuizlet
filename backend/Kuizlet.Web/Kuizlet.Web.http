@@ -1,0 +1,6 @@
+@Kuizlet.Web_HostAddress = http://localhost:5073
+
+GET {{Kuizlet.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

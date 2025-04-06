@@ -7,7 +7,23 @@ using MongoDB.Bson;
 
 namespace Kuizlet.Domain.Entities
 {
-    internal class AccessRequest
+    public class AccessRequest
     {
+        public Guid RequesterId { get; }
+
+        public Guid CardSetId { get; }
+
+        public string Status { get;  }
+        protected AccessRequest() { }
+
+        public AccessRequest(
+            Guid requesterId,
+            Guid cardSetId,
+            string status)
+        {
+            RequesterId = requesterId;
+            CardSetId = cardSetId;
+            Status = status;
+        }
     }
 }

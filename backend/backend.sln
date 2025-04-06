@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuizlet.Api", "Kuizlet.Api\Kuizlet.Api.csproj", "{609FE8F9-E9C8-4107-AF02-5649FC4DF992}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuizlet.Application", "Kuizlet.Application\Kuizlet.Application.csproj", "{D50EE423-014C-4A50-B6F6-ED066507A4D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuizlet.Domain", "Kuizlet.Domain\Kuizlet.Domain.csproj", "{DBD34B47-F61D-4917-A16D-C7D56B16C82B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuizlet.Infrastructure", "Kuizlet.Infrastructure\Kuizlet.Infrastructure.csproj", "{C19544AE-8D51-46AE-8C1B-A21D645E0D42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuizlet.Web", "Kuizlet.Web\Kuizlet.Web.csproj", "{F0EC9DA2-B185-4735-8961-F7713C222546}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{609FE8F9-E9C8-4107-AF02-5649FC4DF992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{609FE8F9-E9C8-4107-AF02-5649FC4DF992}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{609FE8F9-E9C8-4107-AF02-5649FC4DF992}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{609FE8F9-E9C8-4107-AF02-5649FC4DF992}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D50EE423-014C-4A50-B6F6-ED066507A4D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D50EE423-014C-4A50-B6F6-ED066507A4D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D50EE423-014C-4A50-B6F6-ED066507A4D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{C19544AE-8D51-46AE-8C1B-A21D645E0D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C19544AE-8D51-46AE-8C1B-A21D645E0D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C19544AE-8D51-46AE-8C1B-A21D645E0D42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0EC9DA2-B185-4735-8961-F7713C222546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0EC9DA2-B185-4735-8961-F7713C222546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0EC9DA2-B185-4735-8961-F7713C222546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0EC9DA2-B185-4735-8961-F7713C222546}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

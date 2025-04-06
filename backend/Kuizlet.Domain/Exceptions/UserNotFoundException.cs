@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Kuizlet.Domain.Exceptions
 {
-    internal class UserNotFoundException
+    public class UserNotFoundException : Exception
     {
+        public UserNotFoundException(string message) : base(message)
+        {
+        }
     }
 }

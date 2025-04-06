@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kuizlet.Domain\Kuizlet.Domain.csproj" />
   </ItemGroup>
 
 </Project>

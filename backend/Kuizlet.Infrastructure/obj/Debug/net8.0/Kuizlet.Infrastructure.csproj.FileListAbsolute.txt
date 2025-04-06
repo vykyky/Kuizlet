@@ -1,11 +1,17 @@
 C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\bin\Debug\net8.0\Kuizlet.Infrastructure.deps.json
 C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\bin\Debug\net8.0\Kuizlet.Infrastructure.dll
 C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\bin\Debug\net8.0\Kuizlet.Infrastructure.pdb
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\bin\Debug\net8.0\Kuizlet.Application.dll
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\bin\Debug\net8.0\Kuizlet.Domain.dll
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\bin\Debug\net8.0\Kuizlet.Application.pdb
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\bin\Debug\net8.0\Kuizlet.Domain.pdb
 C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\obj\Debug\net8.0\Kuizlet.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\obj\Debug\net8.0\Kuizlet.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\obj\Debug\net8.0\Kuizlet.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\obj\Debug\net8.0\Kuizlet.Infrastructure.AssemblyInfo.cs
 C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\obj\Debug\net8.0\Kuizlet.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\obj\Debug\net8.0\Kuizlet.Infrastructure.sourcelink.json
+C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\obj\Debug\net8.0\Kuizlet..E1310B46.Up2Date
 C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\obj\Debug\net8.0\Kuizlet.Infrastructure.dll
 C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\obj\Debug\net8.0\refint\Kuizlet.Infrastructure.dll
 C:\Users\Lenovo\Documents\OOP\Kuizlet\backend\Kuizlet.Infrastructure\obj\Debug\net8.0\Kuizlet.Infrastructure.pdb

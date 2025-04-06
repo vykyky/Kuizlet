@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Kuizlet.Api.props" />
-</Project>

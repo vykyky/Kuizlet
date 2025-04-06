@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Kuizlet.Application.Services.UserService">
+    <Position X="1.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\UserService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kuizlet.Application.Services.RegisterService">
+    <Position X="3.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Services\RegisterService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Kuizlet.Application.Services.LoginService">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAIAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\LoginService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Kuizlet.Application.Services.CardService">
+    <Position X="7" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAQCAAAABAAACAAAAAA=</HashCode>
+      <FileName>Services\CardService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kuizlet.Application.Services.AccessRequestService">
+    <Position X="10.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAIAgCAAAAAAAAAAAAAAAAAAAAAAIAAAEAAAAAAA=</HashCode>
+      <FileName>Services\AccessRequestService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kuizlet.Application.Services.CardSetService">
+    <Position X="8.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAgggAAAAAAAAAAAAAAAAAAAAAAAQAAAECAAAgAA=</HashCode>
+      <FileName>Services\CardSetService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kuizlet.Application.Services.JWTService" Collapsed="true">
+    <Position X="12.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\JWTService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kuizlet.Application.Models.AccessRequestDto">
+    <Position X="16" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAUAAAAAAAAAAAAAgAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\AccessRequestDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kuizlet.Application.Models.CardDto">
+    <Position X="18" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAACAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Models\CardDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kuizlet.Application.Models.CardSetDto">
+    <Position X="20" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAACAAAAAAQQACAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Models\CardSetDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kuizlet.Application.Models.LoginRequestDto">
+    <Position X="16" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>Models\LoginRequestDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kuizlet.Application.Models.RegisterRequestDto">
+    <Position X="17.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>Models\RegisterRequestDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kuizlet.Application.Models.ResponseDto">
+    <Position X="19.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\ResponseDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kuizlet.Application.Models.UserDto">
+    <Position X="21.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Models\UserDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Kuizlet.Application.Interfaces.IUserRepository" Collapsed="true">
+    <Position X="1.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAEACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IUserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Kuizlet.Application.Interfaces.IAccessRequestRepository" Collapsed="true">
+    <Position X="10.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IAccessRequestRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Kuizlet.Application.Interfaces.ICardRepository" Collapsed="true">
+    <Position X="6.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICardRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Kuizlet.Application.Interfaces.ICardSetRepository" Collapsed="true">
+    <Position X="8.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICardSetRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

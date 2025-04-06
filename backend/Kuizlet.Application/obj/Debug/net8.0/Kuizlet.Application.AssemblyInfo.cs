@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kuizlet.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97e7253924fce8bf5ebd1fe4877fb955da66b103")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kuizlet.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kuizlet.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

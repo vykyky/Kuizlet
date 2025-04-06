@@ -7,8 +7,6 @@ async function createCardSet() {
         return;
     }
     const setName = document.getElementById('setName').value.trim();
-    const firstLanguage = document.getElementById('firstLanguage').value;
-    const secondLanguage = document.getElementById('secondLanguage').value;
     const isPublic = document.getElementById('isPublic').checked;
     if (!setName) {
         alert("Card set name cannot be empty!");
@@ -17,11 +15,9 @@ async function createCardSet() {
     const newCardSet = {
         name: setName,
         isPublic: isPublic,
-        firstLanguage: firstLanguage,
-        secondLanguage: secondLanguage
     };
     try {
-        const response = await fetch('/cardsets', {
+        const response = await fetch('/cardsets', {    //создание нового набора. вызывается в
             method: 'POST',
             headers: {
                 'Authorization': 'Bearer ' + token,
@@ -40,13 +36,13 @@ async function createCardSet() {
     }
 }
 
-async function fetchAllCardSets() {
+async function fetchAllCardSets() {      
     const token = localStorage.getItem('jwt');
     if (!token) {
-        window.location.href = '/login';
+        window.location.href = '../pages/login.html';
         return;
     }
-    const response = await fetch('/cardsets/all', {
+    const response = await fetch('/cardsets/all', {        //получение всех карточек. вызывается в
         headers: { 'Authorization': 'Bearer ' + token }
     });
     if (response.ok) {
@@ -60,10 +56,10 @@ async function fetchAllCardSets() {
 async function fetchCardSets() {
     const token = localStorage.getItem('jwt');
     if (!token) {
-        window.location.href = '/login';
+        window.location.href = '../pages/login.html';
         return;
     }
-    const response = await fetch('/cardsets/all', {
+    const response = await fetch('/cardsets/all', {     //получение всех карточек. по коду если честно то же самое что и прошлое
         headers: { 'Authorization': 'Bearer ' + token }
     });
     if (response.ok) {
@@ -77,16 +73,16 @@ async function fetchCardSets() {
 async function fetchPendingRequests() {
     const token = localStorage.getItem('jwt');
     if (!token) {
-        window.location.href = '/login';
+        window.location.href = '../pages/login.html';
         return [];
     }
-    const username = localStorage.getItem('username');
-    if (!username) {
-        console.error('Username not found');
+    const login = localStorage.getItem('login');
+    if (!login) {
+        console.error('Login not found');
         return [];
     }
     const allCardSets = await fetchCardSets();
-    const userCardSets = allCardSets.filter(set => set.creatorName === username);
+    const userCardSets = allCardSets.filter(set => set.creatorName === login);
     const allRequests = [];
     for (const cardSet of userCardSets) {
         const response = await fetch(`/request/${cardSet.id}/requests`, {
@@ -134,8 +130,8 @@ async function handleRequest(requestId, cardSetId, action) {
 
 function logout() {
     localStorage.removeItem('jwt');
-    localStorage.removeItem('username');
-    window.location.href = '/login';
+    localStorage.removeItem('login');
+    window.location.href = '../pages/login.html';
 }
 
 function navigate(page) {
@@ -145,12 +141,24 @@ function navigate(page) {
     activeButton.classList.add('active');
     switch (page) {
         case 'home':
+            if (!localStorage.getItem('jwt')) {
+                localStorage.setItem('jwt', 'fake_dev_token_123');
+                localStorage.setItem('login', 'dev_user');
+            }
             renderAllCardSets();
             break;
         case 'library':
+            if (!localStorage.getItem('jwt')) {
+                localStorage.setItem('jwt', 'fake_dev_token_123');
+                localStorage.setItem('login', 'dev_user');
+            }
             renderLibraryCardSets();
             break;
         case 'notifications':
+            if (!localStorage.getItem('jwt')) {
+                localStorage.setItem('jwt', 'fake_dev_token_123');
+                localStorage.setItem('login', 'dev_user');
+            }
             renderNotifications();
             break;
         default:
@@ -197,8 +205,6 @@ async function updateCardSet() {
         return;
     }
     const setName = document.getElementById('updateSetName').value.trim();
-    const firstLanguage = document.getElementById('updateFirstLanguage').value;
-    const secondLanguage = document.getElementById('updateSecondLanguage').value;
     const isPublic = document.getElementById('updateIsPublic').checked;
     if (!setName) {
         alert("Card set name cannot be empty!");
@@ -207,8 +213,6 @@ async function updateCardSet() {
     const updatedCardSet = {
         name: setName,
         isPublic: isPublic,
-        firstLanguage: firstLanguage,
-        secondLanguage: secondLanguage
     };
     try {
         const response = await fetch(`/cardsets/${currentCardSetId}`, {
@@ -230,31 +234,12 @@ async function updateCardSet() {
     }
 }
 
-function populateLanguageDropdowns() {
-    const languages = [
-        "English", "Spanish", "French", "German", "Russian", "Chinese", "Arabic", "Italian",
-        "Portuguese", "Japanese", "Korean", "Hindi", "Turkish", "Dutch", "Swedish",
-        "Polish", "Greek", "Romanian", "Indonesian", "Vietnamese", "Thai", "Bengali",
-        "Persian", "Urdu", "Hebrew", "Uzbek"
-    ];
-    const firstLangSelect = document.getElementById('firstLanguage');
-    const secondLangSelect = document.getElementById('secondLanguage');
-    const updateFirstLangSelect = document.getElementById('updateFirstLanguage');
-    const updateSecondLangSelect = document.getElementById('updateSecondLanguage');
-    languages.forEach(lang => {
-        firstLangSelect.innerHTML += `<option value="${lang}">${lang}</option>`;
-        secondLangSelect.innerHTML += `<option value="${lang}">${lang}</option>`;
-        updateFirstLangSelect.innerHTML += `<option value="${lang}">${lang}</option>`;
-        updateSecondLangSelect.innerHTML += `<option value="${lang}">${lang}</option>`;
-    });
-}
-
 async function renderAllCardSets() {
-    const username = localStorage.getItem('username');
+    const login = localStorage.getItem('login');
     const container = document.querySelector('.main-content .container');
     container.innerHTML = `
     <div class="header">
-        <span class="username-display">👋 Welcome, ${username || 'User'}!</span>
+        <span class="login-display">👋 Welcome, ${login || 'User'}!</span>
         <button class="logout-btn" onclick="logout()">Logout</button>
     </div>
     <h2>🏠 Home</h2>
@@ -264,7 +249,7 @@ async function renderAllCardSets() {
     <div id="all-cardsets" class="card-grid">Loading...</div>
 `;
 
-    const allCardSets = await fetchAllCardSets();
+    const allCardSets = await fetchAllCardSets();  // ВОЗМОЖНО УБРАТЬ
     const allCardSetsContainer = document.getElementById('all-cardsets');
     allCardSetsContainer.innerHTML = '';
 
@@ -319,10 +304,10 @@ async function renderLibraryCardSets() {
     `;
 
     const allCardSets = await fetchCardSets();
-    const username = localStorage.getItem('username');
+    const login = localStorage.getItem('login');
 
     const userCardSets = allCardSets.filter(set =>
-        set.creatorName === username && (set.accessType === 'OWNER' || set.accessType === 'PRIVATE')
+        set.creatorName === login && (set.accessType === 'OWNER' || set.accessType === 'PRIVATE')
     );
 
     renderCardSets(userCardSets);
@@ -366,7 +351,7 @@ async function renderNotifications() {
     pendingRequests.forEach(request => {
         const notificationHTML = `
             <div class="notification-item">
-                <p>User <strong>${request.requesterUsername}</strong> requested access to <strong>${request.cardSetName}</strong>.</p>
+                <p>User <strong>${request.requesterLogin}</strong> requested access to <strong>${request.cardSetName}</strong>.</p>
                 <div class="notification-actions">
                     <button class="accept" onclick="handleRequest('${request.id}', '${request.cardSetId}', 'accept')">Accept</button>
                     <button class="reject" onclick="handleRequest('${request.id}', '${request.cardSetId}', 'reject')">Reject</button>
@@ -436,5 +421,4 @@ function filterCardSets() {
     });
 }
 
-populateLanguageDropdowns();
 navigate('home');
