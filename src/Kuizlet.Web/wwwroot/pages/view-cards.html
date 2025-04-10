@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All Cards - Kuizlet</title>
+    <link rel="stylesheet" href="../css/view-cards.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+<div class="header">
+    <button class="back-btn" onclick="window.location.href='dashboard.html'">← Back to Dashboard</button>
+</div>
+
+<div class="container">
+    <div class="card-set-info">
+        <h3 id="cardSetName">Loading...</h3>
+        <button class="edit-card-set-btn" onclick="openEditCardSetModal()">✏️ Edit Card Set</button>
+    </div>
+    <h2>All Cards</h2>
+    <button class="add-card-btn" onclick="openAddCardModal()">➕ Add Card</button>
+    <div class="card-list" id="cardList"></div>
+</div>
+
+<div id="editCardSetModal" class="modal">
+    <div class="modal-content">
+        <h3>Edit Card Set</h3>
+        <input type="text" id="editCardSetName" placeholder="Card Set Name">
+        <div class="toggle-container">
+            <span>Public:</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="editIsPublic">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <button onclick="updateCardSet()">Save Changes</button>
+        <button class="cancel" onclick="closeEditCardSetModal()">Cancel</button>
+    </div>
+</div>
+
+<div id="addCardModal" class="modal">
+    <div class="modal-content">
+        <h3>Add New Card</h3>
+        <input type="text" id="termInput" placeholder="Enter term">
+        <input type="text" id="definitionInput" placeholder="Enter definition">
+        <button onclick="addCard()">Add Card</button>
+        <button class="cancel" onclick="closeAddCardModal()">Cancel</button>
+    </div>
+</div>
+<script src="../js/view-cards.js"></script> 
+</body>
+</html>
