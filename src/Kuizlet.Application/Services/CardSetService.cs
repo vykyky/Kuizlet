@@ -3,14 +3,7 @@ using Kuizlet.Application.Interfaces.Repositories;
 using Kuizlet.Application.Models;
 using Kuizlet.Domain.Entities;
 using Kuizlet.Domain.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics;
-using DnsClient;
 
 
 
@@ -169,9 +162,9 @@ namespace Kuizlet.Application.Services
 
         //не работает отображение approved
         private async Task<string> GetAccessStatus(
-    CardSet cardSet,
-    Guid currentUserId,
-    IAccessRequestRepository accessRequestRepository) // Добавляем зависимость от репозитория
+                     CardSet cardSet,
+                     Guid currentUserId,
+                     IAccessRequestRepository accessRequestRepository) // Добавляем зависимость от репозитория
         {
             if (cardSet.CreatorId == currentUserId)
                 return "OWNER";

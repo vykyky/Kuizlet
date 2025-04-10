@@ -82,7 +82,7 @@ async function fetchPendingRequests() {
         return [];
     }
     const allCardSets = await fetchCardSets();
-    const userCardSets = allCardSets.filter(set => set.creatorName === login);
+    const userCardSets = allCardSets.filter(set => set.creatorLogin === login);
     const allRequests = [];
     for (const cardSet of userCardSets) {
         const response = await fetch(`/request/${cardSet.id}/requests`, {
@@ -298,7 +298,7 @@ async function renderLibraryCardSets() {
     const login = localStorage.getItem('login');
 
     const userCardSets = allCardSets.filter(set =>
-        set.creatorName === login && (set.accessType === 'OWNER' || set.accessType === 'PRIVATE')
+        set.creatorLogin === login && (set.accessType === 'OWNER' || set.accessType === 'PRIVATE')
     );
 
     renderCardSets(userCardSets);

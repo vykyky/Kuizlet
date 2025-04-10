@@ -12,7 +12,7 @@ namespace Kuizlet.Application.Models
         public string Name { get; set; }
         public bool IsPublic { get; set; }
         public Guid? CreatorId { get; set; }
-        public string? CreatorName { get; set; }
+        public string? CreatorLogin { get; set; }
         public string? AccessType { get; set; }
 
         public CardSetDto() { }
@@ -22,14 +22,14 @@ namespace Kuizlet.Application.Models
             string name,
             bool isPublic,
             Guid creatorId,
-            string creatorName,
+            string creatorLogin,
             string accessType)
         {
             Id = id;
             Name = name;
             IsPublic = isPublic;
             CreatorId = creatorId;
-            CreatorName = creatorName;
+            CreatorLogin = creatorLogin;
             AccessType = accessType;
         }
     }
