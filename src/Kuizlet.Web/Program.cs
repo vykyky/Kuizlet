@@ -9,15 +9,16 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-// разобраться с токенами. нужно для проверки. передается с клиента. пока устанавливается за счет ниже
+//для проверки
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
+        var secret = builder.Configuration["Jwt:Secret"]
+    ?? throw new InvalidOperationException("JWT Secret is not configured");
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Secret"])),
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret)),
             ValidateIssuer = false, 
             ValidateAudience = false, 
             ClockSkew = TimeSpan.Zero 
@@ -29,7 +30,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
-//дает возможность задать токен
+//для токена в сваггере, можно убрать
 builder.Services.AddSwaggerGen(c =>
 {
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -69,7 +70,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c => {
-        c.RoutePrefix = "swagger"; // Изменяем путь к Swagger UI
+        c.RoutePrefix = "swagger"; 
     });
 }
 
@@ -84,3 +85,5 @@ app.MapFallbackToFile("index.html");
 
 
 app.Run();
+
+public partial class Program { }

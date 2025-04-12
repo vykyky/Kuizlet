@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuizlet.Infrastructure", "K
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuizlet.Web", "Kuizlet.Web\Kuizlet.Web.csproj", "{F0EC9DA2-B185-4735-8961-F7713C222546}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuizlet.Tests", "Kuizlet.Tests\Kuizlet.Tests.csproj", "{831C5806-D1F9-4745-B3D9-BB6AA94FE471}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F0EC9DA2-B185-4735-8961-F7713C222546}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0EC9DA2-B185-4735-8961-F7713C222546}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0EC9DA2-B185-4735-8961-F7713C222546}.Release|Any CPU.Build.0 = Release|Any CPU
+		{831C5806-D1F9-4745-B3D9-BB6AA94FE471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{831C5806-D1F9-4745-B3D9-BB6AA94FE471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{831C5806-D1F9-4745-B3D9-BB6AA94FE471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{831C5806-D1F9-4745-B3D9-BB6AA94FE471}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

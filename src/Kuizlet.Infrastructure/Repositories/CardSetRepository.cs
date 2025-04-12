@@ -73,7 +73,7 @@ namespace Kuizlet.Infrastructure.Repositories
 
         public Task AddAsync(CardSet cardSet)
         {
-            _cardSets[cardSet.Id] = cardSet; // Добавление карточки в хранилище
+            _cardSets[cardSet.Id] = cardSet; 
             return Task.CompletedTask;
         }
 
@@ -81,14 +81,14 @@ namespace Kuizlet.Infrastructure.Repositories
         {
             if (_cardSets.ContainsKey(cardSet.Id))
             {
-                _cardSets[cardSet.Id] = cardSet; // Обновление карточки
+                _cardSets[cardSet.Id] = cardSet; 
             }
             return Task.CompletedTask;
         }
 
         public Task DeleteAsync(Guid cardSetId)
         {
-            _cardSets.TryRemove(cardSetId, out var removedCardSet);// Удаление карточки
+            _cardSets.TryRemove(cardSetId, out var removedCardSet);
             return Task.CompletedTask;
         }
 

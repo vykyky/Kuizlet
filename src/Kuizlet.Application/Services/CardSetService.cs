@@ -39,8 +39,7 @@ namespace Kuizlet.Application.Services
             {
                 var creator = await _userRepository.GetByIdAsync(cardSet.CreatorId);
                 var creatorLogin = creator?.Login;
-
-                // Теперь передаем _accessRequestRepository в GetAccessStatus
+         
                 var accessType = await GetAccessStatus(
                     cardSet,
                     currentUserId.Value,
@@ -90,8 +89,6 @@ namespace Kuizlet.Application.Services
                     "REQUESTED"
                 );
             }
-
-            // Если карточка доступна напрямую
             var creatorUser = await _userRepository.GetByIdAsync(cardSet.CreatorId);
             var accessType = await GetAccessStatus(cardSet, currentUserId.Value, _accessRequestRepository);
             return new CardSetDto(
@@ -122,7 +119,7 @@ namespace Kuizlet.Application.Services
             };
 
             await _cardSetRepository.AddAsync(cardSet);
-            return ConvertCardSetToRecord(cardSet, "OWNER");
+            return ConvertCardSetToDto(cardSet, "OWNER");
         }
 
         public async Task DeleteCardSetAsync(Guid id)
@@ -139,7 +136,7 @@ namespace Kuizlet.Application.Services
             cardSet.IsPublic = cardSetDto.IsPublic;
 
             await _cardSetRepository.UpdateAsync(cardSet);
-            return ConvertCardSetToRecord(cardSet, cardSetDto.AccessType);
+            return ConvertCardSetToDto(cardSet, cardSetDto.AccessType);
         }
 
         private async Task<CardSet> FindCardSetByIdAndVerifyOwnerAsync(Guid id)
@@ -160,11 +157,11 @@ namespace Kuizlet.Application.Services
 
         }
 
-        //не работает отображение approved
         private async Task<string> GetAccessStatus(
-                     CardSet cardSet,
-                     Guid currentUserId,
-                     IAccessRequestRepository accessRequestRepository) // Добавляем зависимость от репозитория
+            CardSet cardSet,
+            Guid currentUserId,
+            IAccessRequestRepository accessRequestRepository)
+
         {
             if (cardSet.CreatorId == currentUserId)
                 return "OWNER";
@@ -190,14 +187,14 @@ namespace Kuizlet.Application.Services
             return "NONE";
         }
 
-        private CardSetDto ConvertCardSetToRecord(CardSet cardSet, string accessType)
+        private CardSetDto ConvertCardSetToDto(CardSet cardSet, string accessType)
         {
             return new CardSetDto(
                 cardSet.Id,
                 cardSet.Name,
                 cardSet.IsPublic,
                 cardSet.CreatorId,
-                null, // username можно добавить при необходимости
+                null, 
                 accessType
             );
         }

@@ -34,7 +34,6 @@ namespace Kuizlet.Application.Services
             {
                 throw new InvalidOperationException("User with this username already exists");
             }
-            //можно добавить проверку на то что пользователь уже существует
 
 
             var (hash, salt) = _passwordHasher.CreateHashWithSalt(password);

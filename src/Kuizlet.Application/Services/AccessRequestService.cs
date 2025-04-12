@@ -42,23 +42,25 @@ namespace Kuizlet.Application.Services
             if (cardSet == null)
                 return new ResponseDto("error", "Card set not found");
 
-            // Проверка владельца
+            //нужно изза того что не получается обновить страничку сразу после запроса
+            //ну вообще тоже надо для логики
             if (cardSet.CreatorId == currentUserId.Value)
                 return new ResponseDto("message", "You are the creator of this card set");
 
-            // Проверка уже имеющегося доступа
             if (cardSet.ApprovedUserIds.Contains(currentUserId.Value))
                 return new ResponseDto("message", "You already have access to this card set");
 
-            // Проверка существующих запросов
+
             var existingRequest = await _accessRequestRepository
                 .FindByCardSetAndUserAsync(cardSetId, currentUserId.Value);
 
             if (existingRequest != null)
             {
+                //уже был отправлен запрос (у меня кнопки некликабельными становятся, но если бы не были то пригодится)
                 if (existingRequest.Status == "PENDING")
                     return new ResponseDto("message", "You already have a pending request for this card set");
 
+                //ранее отклоняли то обновляем статус запроса(новый не создается)
                 if (existingRequest.Status == "REJECTED")
                 {
                     existingRequest.Status = "PENDING";
@@ -67,7 +69,6 @@ namespace Kuizlet.Application.Services
                 }
             }
 
-            // Создание нового запроса
             var request = new AccessRequest
             {
                 Id = Guid.NewGuid(),
@@ -86,7 +87,6 @@ namespace Kuizlet.Application.Services
             if (request == null)
                 throw new InvalidOperationException("Access request not found");
 
-            // Проверка соответствия cardSetId
             if (request.CardSetId != cardSetId)
                 throw new InvalidOperationException("Invalid cardSetId for the given request");
 
@@ -100,7 +100,6 @@ namespace Kuizlet.Application.Services
 
             if (approve)
             {
-                // Одобрение запроса
                 request.Status = "APPROVED";
                 await _cardSetRepository.AddApprovedUserAsync(cardSetId, request.RequesterId);
                 await _accessRequestRepository.DeleteAsync(requestId);
@@ -108,7 +107,6 @@ namespace Kuizlet.Application.Services
             }
             else
             {
-                // Отклонение запроса
                 request.Status = "REJECTED";
                 await _accessRequestRepository.UpdateAsync(request);
                 return new ResponseDto("success", "Request has been rejected");

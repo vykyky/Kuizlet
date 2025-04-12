@@ -53,22 +53,7 @@ async function fetchAllCardSets() {
     }
 }
 
-async function fetchCardSets() {
-    const token = localStorage.getItem('jwt');
-    if (!token) {
-        window.location.href = '../pages/login.html';
-        return;
-    }
-    const response = await fetch('/cardsets/all', {     //получение всех карточек. по коду если честно то же самое что и прошлое
-        headers: { 'Authorization': 'Bearer ' + token }
-    });
-    if (response.ok) {
-        return await response.json();
-    } else {
-        console.error('Error fetching card sets');
-        return [];
-    }
-}
+
 
 async function fetchPendingRequests() {
     const token = localStorage.getItem('jwt');
@@ -81,7 +66,7 @@ async function fetchPendingRequests() {
         console.error('Login not found');
         return [];
     }
-    const allCardSets = await fetchCardSets();
+    const allCardSets = await fetchAllCardSets();
     const userCardSets = allCardSets.filter(set => set.creatorLogin === login);
     const allRequests = [];
     for (const cardSet of userCardSets) {
@@ -230,7 +215,7 @@ async function renderAllCardSets() {
     const container = document.querySelector('.main-content .container');
     container.innerHTML = `
     <div class="header">
-        <span class="login-display">Бодрого утра, ${login || 'User'}!</span>
+        <span class="login-display">Welcome, ${login || 'User'}!</span>
         <button class="logout-btn" onclick="logout()">Logout</button>
     </div>
     <h2>Home</h2>
@@ -240,7 +225,7 @@ async function renderAllCardSets() {
     <div id="all-cardsets" class="card-grid">Loading...</div>
 `;
 
-    const allCardSets = await fetchAllCardSets();  // ВОЗМОЖНО УБРАТЬ
+    const allCardSets = await fetchAllCardSets();  
     const allCardSetsContainer = document.getElementById('all-cardsets');
     allCardSetsContainer.innerHTML = '';
 
@@ -294,9 +279,9 @@ async function renderLibraryCardSets() {
         <div id="cardsets" class="card-grid">Loading...</div>
     `;
 
-    const allCardSets = await fetchCardSets();
+    const allCardSets = await fetchAllCardSets();
     const login = localStorage.getItem('login');
-
+    (console.log(allCardSets));
     const userCardSets = allCardSets.filter(set =>
         set.creatorLogin === login && (set.accessType === 'OWNER' || set.accessType === 'PRIVATE')
     );
@@ -318,8 +303,8 @@ function renderCardSets(cardSets) {
 
     cardsetsContainer.innerHTML = cardSets.map(set => `
         <div class="cardset" onclick="openCardSet('${set.id}')">
-            <h3>${set.name}</h3>
-            <div class="access-type">${set.accessType}</div>
+             <h3>${set.name}</h3>
+            <div class="access-type">${set.isPublic ? 'PUBLIC' : 'PRIVATE'}</div>
         </div>
     `).join('');
 }
@@ -371,7 +356,7 @@ async function requestAccess(cardSetId) {
             throw new Error("Failed to request access");
         }
         const result = await response.json();
-        alert(result.message);
+        alert(result.message); 
         const cardSetElement = document.querySelector(`.cardset[onclick*="${cardSetId}"]`);
         if (cardSetElement) {
             const button = cardSetElement.querySelector('.btn');
