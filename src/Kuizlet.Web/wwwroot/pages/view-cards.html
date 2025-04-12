@@ -11,32 +11,23 @@
 </head>
 <body>
 <div class="header">
-    <button class="back-btn" onclick="window.location.href='dashboard.html'">← Back to Dashboard</button>
+    <button class="back-btn" onclick="back()">← Back to Cards</button>
 </div>
 
 <div class="container">
-    <div class="card-set-info">
-        <h3 id="cardSetName">Loading...</h3>
-        <button class="edit-card-set-btn" onclick="openEditCardSetModal()">✏️ Edit Card Set</button>
-    </div>
     <h2>All Cards</h2>
     <button class="add-card-btn" onclick="openAddCardModal()">➕ Add Card</button>
     <div class="card-list" id="cardList"></div>
 </div>
 
-<div id="editCardSetModal" class="modal">
+<!-- Edit Card Modal -->
+<div id="editCardModal" class="modal">
     <div class="modal-content">
-        <h3>Edit Card Set</h3>
-        <input type="text" id="editCardSetName" placeholder="Card Set Name">
-        <div class="toggle-container">
-            <span>Public:</span>
-            <label class="toggle-switch">
-                <input type="checkbox" id="editIsPublic">
-                <span class="slider"></span>
-            </label>
-        </div>
-        <button onclick="updateCardSet()">Save Changes</button>
-        <button class="cancel" onclick="closeEditCardSetModal()">Cancel</button>
+        <h3>Edit Card</h3>
+        <input id="editFrontText" placeholder="Term"></input>
+        <input id="editBackText" placeholder="Definition"></input>
+        <button onclick="updateCard()">Update</button>
+        <button class="cancel" onclick="closeEditModal()">Cancel</button>
     </div>
 </div>
 

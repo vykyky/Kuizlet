@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1e1e2e, #3a3a5a);
-    color: white;
+    font-family: Arial, sans-serif;
+   
+    color: black;
     text-align: center;
     padding: 20px;
     display: flex;
@@ -28,21 +26,21 @@ body {
 }
 
 .back-btn {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: #514593;
     color: white;
+    font-weight: bold;
     border: none;
     padding: 12px 24px;
     font-size: 16px;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    font-weight: 600;
-    box-shadow: 0 4px 10px rgba(106, 17, 203, 0.4);
+    
 }
 
 .back-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(106, 17, 203, 0.6);
+   
 }
 
 .container {
@@ -78,24 +76,6 @@ h2 {
     opacity: 0.8;
 }
 
-.edit-card-set-btn {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    font-size: 14px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    font-weight: 600;
-    box-shadow: 0 4px 10px rgba(106, 17, 203, 0.4);
-}
-
-.edit-card-set-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(106, 17, 203, 0.6);
-}
-
 .card-list {
     display: flex;
     flex-direction: column;
@@ -103,11 +83,17 @@ h2 {
 }
 
 .card-item {
-    background: rgba(255, 255, 255, 0.1);
+    background: #ededee;
     padding: 15px;
     border-radius: 8px;
     text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
+.card-item:hover {
+    transform: scale(1.02);
+}
+
 
 .card-item h3 {
     margin: 0;
@@ -122,22 +108,22 @@ h2 {
 }
 
 .add-card-btn {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
+    background: #d1d5ff;
+    color:  #3c45ad;
+    font-weight: bold;
     border: none;
     padding: 12px 24px;
     font-size: 16px;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    font-weight: 600;
-    box-shadow: 0 4px 10px rgba(106, 17, 203, 0.4);
+   
     margin-bottom: 20px;
 }
 
 .add-card-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(106, 17, 203, 0.6);
+    
 }
 
 .modal {
@@ -170,7 +156,7 @@ h2 {
     color: #333;
 }
 
-.modal input, .modal select, .modal textarea {
+.modal input, .modal select {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -187,67 +173,14 @@ h2 {
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
+    background: #d1d5ff;
+    color:  #3c45ad;
+    font-weight: bold;
 }
 
 .modal button.cancel {
-    background: linear-gradient(135deg, #ff4b5c, #ff6b81);
+    background: #f7b5bf;
+    color: #a3464f;
+    font-weight: bold;
 }
 
-.toggle-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 10px 0;
-    font-size: 16px;
-    font-weight: 500;
-    color: #333;
-}
-
-.toggle-switch {
-    position: relative;
-    width: 50px;
-    height: 24px;
-}
-
-.toggle-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: 0.3s;
-    border-radius: 24px;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 2px;
-    bottom: 2px;
-    background-color: white;
-    transition: 0.3s;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-input:checked + .slider {
-    background-color: #6a11cb;
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-    background-color: white;
-}

@@ -15,7 +15,9 @@ const token = localStorage.getItem("jwt");
     }
 
     let cardSetDetails = null;
-
+    let cards = [];
+    let currentCardId = null;
+    
     async function fetchCards() {
         try {
             const cardSetResponse = await fetch(`/cardsets/${cardSetId}`, {
@@ -31,8 +33,6 @@ const token = localStorage.getItem("jwt");
             }
 
             cardSetDetails = await cardSetResponse.json();
-
-            document.getElementById("cardSetName").textContent = cardSetDetails.name;
            
 
             const cardsResponse = await fetch(`/cards/allCards/${cardSetId}`, {
@@ -47,71 +47,51 @@ const token = localStorage.getItem("jwt");
                 throw new Error(`Failed to fetch cards: ${cardsResponse.status}`);
             }
 
-            const cards = await cardsResponse.json();
+            cards = await cardsResponse.json();
             const cardList = document.getElementById("cardList");
-            cardList.innerHTML = cards.map(card => `
-                <div class="card-item">
+            cardList.innerHTML = ""; // Очищаем список
+
+            // Создаём кликабельные карточки
+            cards.forEach(card => {
+                const cardElement = document.createElement("div");
+                cardElement.className = "card-item";
+                cardElement.innerHTML = `
                     <h3>${card.term}</h3>
                     <p>${card.definition}</p>
-                </div>
-            `).join('');
+                `;
+    
+                // Добавляем обработчик клика
+                cardElement.addEventListener("click", () => {
+                    openEditModal(card.id); // Открываем модальное окно с данными карточки
+                });
+    
+                cardList.appendChild(cardElement);
+            });
+    
         } catch (error) {
             console.error("Error fetching cards:", error);
             alert("Something went wrong. Try again later.");
         }
     }
 
-    function openEditCardSetModal() {
-        if (cardSetDetails) {
-            document.getElementById("editCardSetName").value = cardSetDetails.name;
-            document.getElementById("editIsPublic").checked = cardSetDetails.isPublic || false;
-            document.getElementById("editCardSetModal").style.display = "flex";
-        }
-    }
-
-    function closeEditCardSetModal() {
-        document.getElementById("editCardSetModal").style.display = "none";
-    }
-
-    async function updateCardSet() {
-        const name = document.getElementById("editCardSetName").value.trim();
-        const isPublic = document.getElementById("editIsPublic").checked;
-
-        if (!name) {
-            alert("All fields are required!");
+    function openEditModal(cardId) {
+        currentCardId = cardId; // Сохраняем ID для использования в saveCardChanges
+        const card = cards.find(c => c.id === cardId);
+        
+        if (!card) {
+            console.error("Card not found");
             return;
         }
-
-        const updatedCardSet = {
-            Id: cardSetId,
-            Name: name,
-            IsPublic: isPublic
-        };
-
-        try {
-            const response = await fetch(`/cardsets/${cardSetId}`, {
-                method: "PUT",
-                headers: {
-                    "Authorization": 'Bearer ' + token,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(updatedCardSet)
-            });
-
-            if (!response.ok) {
-                throw new Error("Failed to update card set");
-            }
-
-            const updatedDetails = await response.json();
-            cardSetDetails = updatedDetails;
-            document.getElementById("cardSetName").textContent = updatedDetails.name;
-           
-            closeEditCardSetModal();
-        } catch (error) {
-            console.error("Error updating card set:", error);
-            alert("Failed to update card set. Please try again.");
-        }
+    
+        document.getElementById("editFrontText").value = card.term;
+        document.getElementById("editBackText").value = card.definition;
+        document.getElementById("editCardModal").style.display = "flex";
     }
+    
+    function closeEditModal() {
+        document.getElementById("editCardModal").style.display = "none";
+    }
+    
 
     function openAddCardModal() {
         if (cardSetDetails) {
@@ -129,6 +109,52 @@ const token = localStorage.getItem("jwt");
     function clearInputFields() {
         document.getElementById("termInput").value = "";
         document.getElementById("definitionInput").value = "";
+    }
+
+    async function updateCard() {
+        const frontText = document.getElementById("editFrontText").value.trim();
+        const backText = document.getElementById("editBackText").value.trim();
+    
+        if (!frontText || !backText) {
+            alert("Both front and back text are required!");
+            return;
+        }
+    
+        const CardRecord = {
+            term: frontText,
+            definition: backText
+        };
+    
+        try {
+            const response = await fetch(`/cards/${currentCardId}`, {
+                method: "PUT",
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(CardRecord)
+            });
+    
+            if (!response.ok) {
+                throw new Error("Failed to update card");
+            }
+    
+            // Update the card in the local array
+            const cardIndex = cards.findIndex(card => card.id === currentCardId);
+            if (cardIndex !== -1) {
+                cards[cardIndex] = {
+                    ...cards[cardIndex],  // Сохраняем остальные поля карточки
+                    term: frontText,
+                    definition: backText
+                };
+            }
+            fetchCards();
+    
+            closeEditModal();
+        } catch (error) {
+            console.error("Error updating card:", error);
+            alert("Failed to update card. Please try again.");
+        }
     }
 
     async function addCard() {
@@ -168,5 +194,8 @@ const token = localStorage.getItem("jwt");
             console.error("Error adding card:", error);
             alert("Failed to add card. Please try again.");
         }
+    }
+    function back(){
+        window.location.href=`../pages/cards.html?cardSetId=${cardSetId}`;
     }
     fetchCards();

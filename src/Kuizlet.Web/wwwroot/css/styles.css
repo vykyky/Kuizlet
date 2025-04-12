@@ -10,13 +10,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
+    background: linear-gradient(#3c45ad, #9198e5);
     color: white;
     text-align: center;
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -27,7 +27,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.btn {
+button {
     display: inline-block;
     padding: 12px 24px;
     margin: 10px;
@@ -38,17 +38,7 @@ h1 {
     transition: 0.3s;
 }
 
-.btn-login {
-    background: #ff9800;
-    color: white;
-}
-
-.btn-register {
-    background: #4caf50;
-    color: white;
-}
-
-.btn:hover {
+button:hover {
     opacity: 0.8;
 }
 

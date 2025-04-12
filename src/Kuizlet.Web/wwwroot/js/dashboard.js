@@ -230,12 +230,12 @@ async function renderAllCardSets() {
     const container = document.querySelector('.main-content .container');
     container.innerHTML = `
     <div class="header">
-        <span class="login-display">👋 Welcome, ${login || 'User'}!</span>
+        <span class="login-display">Бодрого утра, ${login || 'User'}!</span>
         <button class="logout-btn" onclick="logout()">Logout</button>
     </div>
-    <h2>🏠 Home</h2>
+    <h2>Home</h2>
     <div class="search-container">
-        <input type="text" id="searchBar" class="search-box" placeholder="🔍 Search all card sets..." onkeyup="filterAllCardSets()">
+        <input type="text" id="searchBar" class="search-box" placeholder="Search all card sets..." onkeyup="filterAllCardSets()">
     </div>
     <div id="all-cardsets" class="card-grid">Loading...</div>
 `;
@@ -262,10 +262,10 @@ async function renderAllCardSets() {
         } else if (set.accessType === 'PUBLIC') {
             buttonHTML = `<button class="btn" onclick="requestAccess('${set.id}')">Send Request</button>`;
         } else if (set.accessType === 'PENDING') {
-            buttonHTML = `<button class="btn" disabled>PENDING</button>`;
+            accessTypeHTML = `<div class="access-type">${set.accessType}</div>`;
         } else if (set.accessType === 'DECLINED') {
+            accessTypeHTML = `<div class="access-type">DECLINED</div>`;
             buttonHTML = `
-            <button class="btn" disabled>DECLINED</button>
             <button class="btn small-btn" onclick="requestAccess('${set.id}')">Send Request Again</button>
         `;
         }
@@ -287,9 +287,9 @@ async function renderLibraryCardSets() {
         <div class="header">
             <button class="btn" onclick="openModal()">➕ Add Card Set</button>
         </div>
-        <h2>📚 Your Library</h2>
+        <h2>Your Library</h2>
         <div class="search-container">
-            <input type="text" id="searchBar" class="search-box" placeholder="🔍 Search your card sets..." onkeyup="filterCardSets()">
+            <input type="text" id="searchBar" class="search-box" placeholder="Search your card sets..." onkeyup="filterCardSets()">
         </div>
         <div id="cardsets" class="card-grid">Loading...</div>
     `;
@@ -328,7 +328,7 @@ async function renderNotifications() {
     const container = document.querySelector('.main-content .container');
     container.innerHTML = `
         <div class="header">
-            <h2>🔔 Notifications</h2>
+            <h2>Notifications</h2>
         </div>
         <div id="notifications" class="card-grid">Loading...</div>
     `;

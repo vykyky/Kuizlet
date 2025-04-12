@@ -8,42 +8,49 @@
 </head>
 <body>
 
-<div class="header">
+<header>       
     <button class="back-btn" onclick="window.location.href='dashboard.html'">← Back to Dashboard</button>
-    <div class="dropdown">
-        <button class="add-card-btn">⚙️ Options</button>
-        <div class="dropdown-content">
-        <button onclick="navigateToViewCards()">✏️ Edit</button>
-        <button class="delete" onclick="deleteCardSet()">🗑️ Delete Card Set</button>
-    </div>
-    </div>
-</div>
-
+</header>
 <div class="container">
-    <p class="info-text">Click a card to flip it!</p>
-    <div class="card-container">
-        <div class="card" onclick="flipCard()">
-            <div class="card-front" id="cardFront">Loading...</div>
-            <div class="card-back" id="cardBack">Loading...</div>
-            <button class="edit-button" onclick="openEditModal()">✏️</button>
+    <!-- Блок 2: Карточка -->
+    <div class="card-block">
+        <h1 id="cardSetName">Loading...</h1>
+        <div class="card-container">
+            <div class="card" onclick="flipCard()">
+                <div class="card-front" id="cardFront">Loading...</div>
+                <div class="card-back" id="cardBack">Loading...</div>
+            </div>
+        </div>
+        <div class="navigation">
+            <button onclick="showPreviousCard()">◄</button>
+            <span class="card-counter" id="cardCounter">0/0</span>
+            <button onclick="showNextCard()">►</button>
+        </div>
+        <p id="noCardsMessage">No cards found. Add some cards to get started!</p>
+    </div>
+    
+    <!-- Блок 3: Три кнопки -->
+    <div class="buttons-block">
+        <div class="dropdown">
+            <div class="add-card-btn">
+                <button class="edit" onclick="navigateToViewCards()">Edit Cards</button>
+                <button class="edit-card-set-btn" onclick="openEditCardSetModal()">Edit Card Set</button>
+                <button class="delete" onclick="deleteCardSet()">Delete Card Set</button>
+            </div>
         </div>
     </div>
-    <div class="navigation">
-        <button onclick="showPreviousCard()">◄</button>
-        <span class="card-counter" id="cardCounter">0/0</span>
-        <button onclick="showNextCard()">►</button>
-    </div>
-    <p id="noCardsMessage">No cards found. Add some cards to get started!</p>
 </div>
 
-<!-- Edit Card Modal -->
-<div id="editCardModal" class="modal">
+<div id="editCardSetModal" class="modal">
     <div class="modal-content">
-        <h3>Edit Card</h3>
-        <textarea id="editFrontText" placeholder="Front of the card"></textarea>
-        <textarea id="editBackText" placeholder="Back of the card"></textarea>
-        <button onclick="updateCard()">Update</button>
-        <button class="cancel" onclick="closeEditModal()">Cancel</button>
+        <h3>Edit Card Set</h3>
+        <input type="text" id="editCardSetName" placeholder="Card Set Name">
+        <div class="checkbox-container">
+            <label for="editIsPublic">Public</label>
+            <input type="checkbox" id="editIsPublic">
+        </div>
+        <button onclick="updateCardSet()">Save Changes</button>
+        <button class="cancel" onclick="closeEditCardSetModal()">Cancel</button>
     </div>
 </div>
 

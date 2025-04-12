@@ -12,7 +12,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
     const message = document.getElementById('message');
     if (response.status === 201) {
-        message.style.color = 'green';
+        message.style.color = 'black';
         message.innerText = "Registration successful! You can now log in.";
         setTimeout(() => window.location.href = '../pages/login.html', 2000);
     } else if (response.status === 409) {

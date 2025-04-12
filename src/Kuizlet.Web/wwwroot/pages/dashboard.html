@@ -8,9 +8,9 @@
 </head>
 <body>
 <div class="sidebar">
-    <button class="active" onclick="navigate('home')">🏠 Home</button>
-    <button onclick="navigate('library')">📚 Your Library</button>
-    <button onclick="navigate('notifications')">🔔 Notifications</button>
+    <button class="active" onclick="navigate('home')">Home</button>
+    <button onclick="navigate('library')">Your Library</button>
+    <button onclick="navigate('notifications')">Notifications</button>
 </div>
 <div class="main-content">
     <div class="container"></div>
@@ -19,12 +19,9 @@
     <div class="modal-content">
         <h3>Create New Card Set</h3>
         <input type="text" id="setName" placeholder="Card Set Name">
-        <div class="toggle-container">
-            <span>Public:</span>
-            <label class="toggle-switch">
-                <input type="checkbox" id="isPublic">
-                <span class="slider"></span>
-            </label>
+        <div class="checkbox-container">
+            <label for="isPublic">Public</label>
+            <input type="checkbox" id="isPublic">
         </div>
         <button class="btn" onclick="createCardSet()">Create</button>
         <button class="logout-btn" onclick="closeModal()">Cancel</button>
@@ -34,12 +31,10 @@
     <div class="modal-content">
         <h3>Update Card Set</h3>
         <input type="text" id="updateSetName" placeholder="Card Set Name">
-        <div class="toggle-container">
-            <span>Public:</span>
-            <label class="toggle-switch">
-                <input type="checkbox" id="updateIsPublic">
-                <span class="slider"></span>
-            </label>
+        <div class="checkbox-container">
+            <label for="isPublic">Public</label>
+            <input type="checkbox" id="isPublic">
+           
         </div>
         <button class="btn" onclick="updateCardSet()">Update</button>
         <button class="logout-btn" onclick="closeUpdateModal()">Cancel</button>

@@ -14,7 +14,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
         const token = await response.text();
         localStorage.setItem('jwt', token);
         localStorage.setItem('login', Login);
-        message.style.color = 'green';
+        message.style.color = 'black';
         message.innerText = "Login successful! Redirecting...";
         setTimeout(() => window.location.href = '../pages/dashboard.html', 2000);
     } else {

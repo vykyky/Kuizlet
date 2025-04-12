@@ -20,6 +20,7 @@ if (!cardSetId) {
     alert("Invalid Card Set ID!");
     window.location.href = "../pages/dashboard.html";
 }
+let cardSetDetails = null;
 
 let cards = [];
 let currentCardIndex = 0;
@@ -40,11 +41,12 @@ async function fetchCards() {
             throw new Error("Failed to fetch card set details");
         }
 
-        const cardSetDetails = await cardSetResponse.json();
+        cardSetDetails = await cardSetResponse.json();
         cardSetAccessType = cardSetDetails.accessType;
+        document.getElementById("cardSetName").textContent = cardSetDetails.name;
 
         // Show or hide the add card button based on access type
-        const addCardButton = document.querySelector(".add-card-btn");
+        const addCardButton = document.querySelector(".dropdown");
         if (cardSetAccessType === "OWNER") {
             addCardButton.style.display = "block";
         } else {
@@ -81,19 +83,81 @@ async function fetchCards() {
     }
 }
 
+document.addEventListener('keydown', function(event) {
+   
+    switch(event.key) {
+        case 'ArrowLeft':
+            
+            showPreviousCard();
+            break;
+        case 'ArrowRight':
+          
+            showNextCard();
+            break;
+        case ' ':
+           
+            event.preventDefault(); 
+            flipCard();
+            break;
+    }
+});
+
+function openEditCardSetModal() {
+    if (cardSetDetails) {
+        document.getElementById("editCardSetName").value = cardSetDetails.name;
+        document.getElementById("editIsPublic").checked = cardSetDetails.isPublic || false;
+        document.getElementById("editCardSetModal").style.display = "flex";
+    }
+}
+
+function closeEditCardSetModal() {
+    document.getElementById("editCardSetModal").style.display = "none";
+}
+
+async function updateCardSet() {
+    const name = document.getElementById("editCardSetName").value.trim();
+    const isPublic = document.getElementById("editIsPublic").checked;
+
+    if (!name) {
+        alert("All fields are required!");
+        return;
+    }
+
+    const updatedCardSet = {
+        Id: cardSetId,
+        Name: name,
+        IsPublic: isPublic
+    };
+
+    try {
+        const response = await fetch(`/cardsets/${cardSetId}`, {
+            method: "PUT",
+            headers: {
+                "Authorization": 'Bearer ' + token,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(updatedCardSet)
+        });
+
+        if (!response.ok) {
+            throw new Error("Failed to update card set");
+        }
+
+        const updatedDetails = await response.json();
+        cardSetDetails = updatedDetails;
+        document.getElementById("cardSetName").textContent = cardSetDetails.name;
+        closeEditCardSetModal();
+    } catch (error) {
+        console.error("Error updating card set:", error);
+        alert("Failed to update card set. Please try again.");
+    }
+}
+
 function updateCardDisplay() {
     const card = cards[currentCardIndex];
     document.getElementById("cardFront").textContent = card.term;
     document.getElementById("cardBack").textContent = card.definition;
     document.getElementById("cardCounter").textContent = `${currentCardIndex + 1}/${cards.length}`;
-
-    // Show or hide the edit button based on access type
-    const editButton = document.querySelector(".edit-button");
-    if (cardSetAccessType === "OWNER") {
-        editButton.style.display = "block";
-    } else {
-        editButton.style.display = "none";
-    }
 }
 
 function flipCard() {
@@ -113,17 +177,6 @@ function showPreviousCard() {
         currentCardIndex--;
         updateCardDisplay();
     }
-}
-
-function openEditModal() {
-    const card = cards[currentCardIndex];
-    document.getElementById("editFrontText").value = card.term;
-    document.getElementById("editBackText").value = card.definition;
-    document.getElementById("editCardModal").style.display = "flex";
-}
-
-function closeEditModal() {
-    document.getElementById("editCardModal").style.display = "none";
 }
 
 function openAddCardModal() {
@@ -173,45 +226,6 @@ async function addCard() {
     }
 }
 
-async function updateCard() {
-    const frontText = document.getElementById("editFrontText").value.trim();
-    const backText = document.getElementById("editBackText").value.trim();
-
-    if (!frontText || !backText) {
-        alert("Both front and back text are required!");
-        return;
-    }
-
-    const CardRecord = {
-        term: frontText,
-        definition: backText
-    };
-
-    try {
-        const response = await fetch(`/cards/${cards[currentCardIndex].id}`, {
-            method: "PUT",
-            headers: {
-                "Authorization": `Bearer ${token}`,
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(CardRecord)
-        });
-
-        if (!response.ok) {
-            throw new Error("Failed to update card");
-        }
-
-        // Update the card in the local array
-        cards[currentCardIndex].term = frontText;
-        cards[currentCardIndex].definition = backText;
-
-        closeEditModal();
-        updateCardDisplay();
-    } catch (error) {
-        console.error("Error updating card:", error);
-        alert("Failed to update card. Please try again.");
-    }
-}
 
 async function deleteCardSet() {
     const confirmDelete = confirm("Are you sure you want to delete this card set? This action cannot be undone.");
@@ -237,5 +251,6 @@ async function deleteCardSet() {
         alert("Failed to delete card set. Please try again.");
     }
 }
+
 
 fetchCards();
