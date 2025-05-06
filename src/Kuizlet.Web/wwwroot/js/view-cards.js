@@ -74,6 +74,36 @@ const token = localStorage.getItem("jwt");
         }
     }
 
+    function openFileImport() {
+        const fileInput = document.getElementById('importFileInput');
+        fileInput.click(); // Открыть диалог выбора файла
+    
+        fileInput.onchange = async () => {
+            const file = fileInput.files[0];
+            if (!file) return;
+    
+            const formData = new FormData();
+            formData.append("file", file);
+    
+            try {
+                const response = await fetch(`/cards/import/${cardSetId}`, {
+                    method: "POST",
+                    body: formData
+                });
+    
+                if (response.ok) {
+                    const data = await response.json();
+                    alert("Импорт успешно завершён!");
+                    fetchCards();
+                } else {
+                    alert("Ошибка при импорте: " + response.statusText);
+                }
+            } catch (error) {
+                alert("Ошибка: " + error.message);
+            }
+        };
+    }
+
     function openEditModal(cardId) {
         currentCardId = cardId; // Сохраняем ID для использования в saveCardChanges
         const card = cards.find(c => c.id === cardId);
@@ -91,6 +121,65 @@ const token = localStorage.getItem("jwt");
     function closeEditModal() {
         document.getElementById("editCardModal").style.display = "none";
     }
+    function openExportCardModal() {
+        if (cardSetDetails) {
+            document.getElementById("filename").placeholder = `Enter filename`;
+            document.getElementById("exportCardModal").style.display = "flex";
+        }
+    }
+
+    function closeExportCardModal() {
+        document.getElementById("exportCardModal").style.display = "none";
+      
+    }
+
+    async function exportCards(format) {
+        const filenameInput = document.getElementById("filename");
+        let filename = filenameInput.value.trim();
+        if (!filename) {
+            alert("Please enter a filename.");
+            return;
+        }
+    
+        // Добавим расширение
+        switch (format) {
+            case "txt":
+                filename += ".txt";
+                break;
+            case "json":
+                filename += ".json";
+                break;
+            case "word":
+                filename += ".docx";
+                break;
+        }
+    
+        try {
+            const response = await fetch(`/cards/export/${format}?cardSetId=${cardSetId}`, {
+                method: "GET"
+            });
+    
+            if (!response.ok) {
+                throw new Error("Failed to export cards.");
+            }
+    
+            const blob = await response.blob();
+    
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(a.href);
+        } catch (error) {
+            console.error("Export failed:", error);
+            alert("Export failed. See console for details.");
+        }
+    }
+    
+
+    
     
 
     function openAddCardModal() {
@@ -190,6 +279,7 @@ const token = localStorage.getItem("jwt");
             closeAddCardModal();
             clearInputFields();
             fetchCards();
+
         } catch (error) {
             console.error("Error adding card:", error);
             alert("Failed to add card. Please try again.");

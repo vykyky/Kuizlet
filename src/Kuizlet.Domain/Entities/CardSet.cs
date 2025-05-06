@@ -16,7 +16,7 @@ namespace Kuizlet.Domain.Entities
         public Guid CreatorId { get; set; }   
 
         public List<Guid> CardIds { get; set; } = new List<Guid>();
-        public List<Guid?> ApprovedUserIds { get; set; } = new List<Guid?>();// Ссылка на пользователей, которые могут использовать набор
+        public List<Guid?> ApprovedUserIds { get; set; } = new List<Guid?>();
 
     }
 }

@@ -12,5 +12,6 @@ namespace Kuizlet.Application.Interfaces
         Task<List<CardDto>> GetCardsByCardSetIdAsync(Guid cardSetId);
         Task<CardDto> AddCardAsync(Guid cardSetId, CardDto cardDto);
         Task<CardDto> UpdateCardAsync(Guid cardId, CardDto cardDto);
+        Task AddCardsAsync(Guid cardSetId, List<CardDto> cards);
     }
 }

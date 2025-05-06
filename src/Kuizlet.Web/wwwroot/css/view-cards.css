@@ -51,7 +51,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
-    margin-top: 80px; /* To avoid overlap with the header */
+    margin-top: 80px;
 }
 
 h2 {
@@ -117,13 +117,46 @@ h2 {
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-   
     margin-bottom: 20px;
 }
 
 .add-card-btn:hover {
     transform: scale(1.05);
     
+}
+
+.import-card-btn {
+    background: #d1d5ff;
+    color:  #3c45ad;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.import-card-btn:hover {
+    transform: scale(1.05);
+}
+
+.export-card-btn {
+    background: #d1d5ff !important;
+    color:  #3c45ad;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.export-card-btn:hover {
+    transform: scale(1.05);
 }
 
 .modal {

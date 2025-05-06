@@ -247,7 +247,7 @@ h2 {
 .checkbox-container input[type="checkbox"] {
     width: 18px;
     height: 18px;
-    accent-color: #262a53; /* Цвет галочки */
+    accent-color: #262a53; 
 }
 
 .checkbox-container label {

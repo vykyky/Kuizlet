@@ -16,6 +16,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Kuizlet.Serializers">
+      <HintPath>..\..\external\Kuizlet.Serializers\bin\Release\net8.0\Kuizlet.Serializers.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+  <ItemGroup>
     <ProjectReference Include="..\Kuizlet.Application\Kuizlet.Application.csproj" />
     <ProjectReference Include="..\Kuizlet.Infrastructure\Kuizlet.Infrastructure.csproj" />
   </ItemGroup>

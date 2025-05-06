@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuizlet.Serializers", "Kuizlet.Serializers\Kuizlet.Serializers.csproj", "{62FA20B7-9B37-47D5-AB3D-F6BF1976F159}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuizlet.Serializers.Test", "Kuizlet.Serializers.Test\Kuizlet.Serializers.Test.csproj", "{0570FB74-5CE1-4B30-AA7E-7761061AA89E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62FA20B7-9B37-47D5-AB3D-F6BF1976F159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62FA20B7-9B37-47D5-AB3D-F6BF1976F159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62FA20B7-9B37-47D5-AB3D-F6BF1976F159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62FA20B7-9B37-47D5-AB3D-F6BF1976F159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0570FB74-5CE1-4B30-AA7E-7761061AA89E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0570FB74-5CE1-4B30-AA7E-7761061AA89E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0570FB74-5CE1-4B30-AA7E-7761061AA89E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0570FB74-5CE1-4B30-AA7E-7761061AA89E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F7F2257-4C47-4608-B221-B44E43302676}
+	EndGlobalSection
+EndGlobal

@@ -1,11 +1,6 @@
 ﻿using Kuizlet.Application.Interfaces.Repositories;
 using Kuizlet.Application.Models;
 using Kuizlet.Application.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Kuizlet.Domain.Entities;
 using Kuizlet.Domain.Exceptions;
 
@@ -142,6 +137,5 @@ namespace Kuizlet.Application.Services
             return result;
 
         }
-
     }
 }

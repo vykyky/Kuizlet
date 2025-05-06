@@ -8,7 +8,7 @@ namespace Kuizlet.Application.Models
 {
     public class CardDto
     {
-        public Guid Id { get; set; }
+        public Guid? Id { get; set; }
         public string Term { get; set; }
         public string Definition { get; set; }
 

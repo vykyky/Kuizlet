@@ -27,11 +27,11 @@ namespace Kuizlet.Web.Controllers
             }
             catch (InvalidOperationException ex) when (ex.Message.Contains("already exists"))
             {
-                return Conflict(ex.Message); // 409 Conflict
+                return Conflict(ex.Message); // 409
             }
             catch (ArgumentException ex)
             {
-                return BadRequest(ex.Message); // 400 Bad Request
+                return BadRequest(ex.Message); // 400 
             }
         }
     }

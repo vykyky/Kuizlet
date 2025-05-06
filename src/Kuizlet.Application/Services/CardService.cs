@@ -60,6 +60,25 @@ namespace Kuizlet.Application.Services
             return ConvertToDto(updatedCard);
         }
 
+        public async Task AddCardsAsync(Guid cardSetId, List<CardDto> cards)
+        {
+            var cardSet = await _cardSetRepository.GetByIdAsync(cardSetId)
+                ?? throw new CardSetNotFoundException("CardSet not found");
+
+            foreach (var cardDto in cards)
+            {
+                var card = new Card
+                {
+                    Id = Guid.NewGuid(),
+                    Term = cardDto.Term,
+                    Definition = cardDto.Definition,
+                    CardSetId = cardSetId
+                };
+
+                var createdCard = await _cardRepository.AddAsync(card);
+            }
+        }
+
         private CardDto ConvertToDto(Card card)
         {
             return new CardDto(

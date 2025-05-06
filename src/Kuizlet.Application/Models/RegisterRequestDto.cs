@@ -8,8 +8,8 @@ namespace Kuizlet.Application.Models
 {
     public class RegisterRequestDto
     {
-        public string Name { get; set; }      // Было: FullName
-        public string Login { get; set; }     // Было: Login
-        public string Password { get; set; }  // Было: Password
+        public string Name { get; set; }      
+        public string Login { get; set; }     
+        public string Password { get; set; }  
     }
 }

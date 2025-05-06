@@ -27,8 +27,8 @@ header h1 {
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    text-align: left; /* Базовое выравнивание */
-    transform: translateX(500px); /* Сдвигаем на 20px вправо */
+    text-align: left; 
+    transform: translateX(500px); 
 }
 
 .container {
@@ -42,7 +42,6 @@ header h1 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Блок 1: Кнопка Назад */
 .back-btn {
     position: absolute;
     left: 15px;
@@ -62,7 +61,6 @@ header h1 {
     transform: scale(1.05);
 }
 
-/* Блок 2: Карточка (центр) */
 .card-block {
     flex: 1 1 auto;
     display: flex;
@@ -127,8 +125,8 @@ header h1 {
     justify-content: space-between;
     align-items: center;
     width: 200px;
-    margin: 0 auto; /* Изменено */
-    padding-top: 20px; /* Добавлено */
+    margin: 0 auto; 
+    padding-top: 20px;
 }
 
 .navigation button {
@@ -149,7 +147,6 @@ header h1 {
     font-weight: 600;
 }
 
-/* Блок 3: Три кнопки (справа) */
 .buttons-block {
     order: 1;
     flex: 0 0 auto;
@@ -217,7 +214,7 @@ h2 {
 .checkbox-container input[type="checkbox"] {
     width: 18px;
     height: 18px;
-    accent-color: #262a53; /* Цвет галочки */
+    accent-color: #262a53; 
 }
 
 .checkbox-container label {
@@ -225,7 +222,6 @@ h2 {
     cursor: pointer;
 }
 
-/* Modal Styling */
 .modal {
     display: none;
     position: fixed;
@@ -288,5 +284,5 @@ h2 {
     font-weight: 400;
     margin-top: 20px;
     opacity: 0.8;
-    display: none; /* Initially hidden */
+    display: none; 
 }

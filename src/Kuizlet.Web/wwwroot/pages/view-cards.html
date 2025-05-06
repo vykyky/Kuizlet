@@ -17,6 +17,9 @@
 <div class="container">
     <h2>All Cards</h2>
     <button class="add-card-btn" onclick="openAddCardModal()">➕ Add Card</button>
+    <input type="file" id="importFileInput" style="display: none" />
+    <button class="import-card-btn" onclick="openFileImport()"> Import Cards</button>
+    <button class="export-card-btn" onclick="openExportCardModal()"> Export Cards</button>
     <div class="card-list" id="cardList"></div>
 </div>
 
@@ -40,6 +43,19 @@
         <button class="cancel" onclick="closeAddCardModal()">Cancel</button>
     </div>
 </div>
+
+<div id="exportCardModal" class="modal">
+    <div class="modal-content">
+        <h3>Export Cards</h3>
+        <input type="text" id="filename" placeholder="Enter filename">
+        <button onclick="exportCards('txt')">Export Cards Txt</button>
+        <button onclick="exportCards('docx')">Export Cards Word</button>
+        <button onclick="exportCards('json')">Export Cards Json</button>
+
+        <button class="cancel" onclick="closeExportCardModal()">Cancel</button>
+    </div>
+</div>
+
 <script src="../js/view-cards.js"></script> 
 </body>
 </html>
