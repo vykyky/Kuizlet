@@ -29,33 +29,9 @@ Kuizlet  - это полнофункциональное веб-приложен
 
 ## 🏰️ Архитектура проекта 
 ```
-kuizlet
-│   .gitignore
-│   README.md
-|
-├───backend                  # Бэкенд-проект
-│   ├───Kuizlet.Web          # ASP.NET Web API проект
-│   │   ├───Controllers      # Контроллеры API
-│   ├───Kuizlet.Application  # Сервисная логика (прикладной слой)
-│   │   ├───Services         # Сервисы, реализующие бизнес-логику
-│   ├───Kuizlet.Domain       # Доменные сущности (модели данных)
-│   │   ├───Entities         # Классы сущностей (например, User, Card)
-│   │   ├───Exceptions       # Исключения 
-│   └───Kuizlet.Infrastructure # Инфраструктура (работа с хранилищем данных)
-│       ├───Repositories     # Репозитории для работы с данными (например, CardRepository)
-│
-└───frontend                 # Фронтенд
-    ├───css                  # Стили для страниц
-    ├───js                   # Скрипты для страниц
-    └───pages                # HTML страницы приложения
-
-```
-Или:
-
-```
   ─Kuizlet.WebUI         # ASP.NET Web API проект
   │   ├───Controllers      # Контроллеры API
-  |   ├───wwwroot/           # Статика (HTML/CSS/JS) ← фронтенд  (или другая папка типа ClientApp)
+  |   ├───wwwroot/           # Статика (HTML/CSS/JS) ← фронтенд  
   │         ├───index.html  
   │         ├───css/  
   │         └───js/ 
@@ -68,7 +44,7 @@ kuizlet
       ├───Repositories     # Репозитории для работы с данными (например, CardRepository)  
 
 ```
-То есть чистая архитектура, возможно с клиент-серверным разделением.
+То есть чистая архитектура.
 
 ---
 
